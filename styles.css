@@ -1834,10 +1834,10 @@ html[data-theme="light"] .theme-toggle-btn:hover {
   object-fit: cover;
 }
 
-/* Card Highlight Monochromatic Glow */
+/* Card Highlight Olive Glow */
 .process-card:nth-child(3):hover {
-  background: radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.05) 0%, var(--bg-card) 70%) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: radial-gradient(circle at 100% 100%, rgba(235, 255, 0, 0.05) 0%, var(--bg-card) 70%) !important;
+  border-color: rgba(235, 255, 0, 0.12) !important;
 }
 
 @media (max-width: 809.98px) {
