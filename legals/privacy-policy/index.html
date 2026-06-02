@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Blogimiz — DID90° Agency</title>
-  <meta name="description" content="DID90° Agency jamoasining raqamli dizayn, B2B brending strategiyalari va so'nggi tendensiyalari bo'yicha tahliliy maqolalari.">
+  <title>Maxfiylik siyosati — DID90° Agency</title>
+  <meta name="description" content="DID90° Agency jamoasi bilan tanishing. Biz startaplar va dynamic kompaniyalar uchun mukammal brending va raqamli platformalar yaratamiz.">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../styles.css">
   <script>
     // Instant theme restore to prevent flashing
     document.documentElement.setAttribute('data-theme', localStorage.getItem('did90_theme') || 'dark');
@@ -20,7 +20,7 @@
 
   <!-- Sticky Glassmorphic Header Menu -->
   <header>
-    <a href="index.html" class="logo-wrapper" aria-label="DID90° Agency Home">
+    <a href="../../index.html" class="logo-wrapper" aria-label="DID90° Agency Home">
       <svg class="logo-svg" width="1606" height="400" viewBox="0 0 1606 400" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1515.06 184.655C1464.86 184.655 1424.29 144.083 1424.29 94.1481C1424.29 44.2131 1464.86 3.38086 1515.06 3.38086C1564.99 3.38086 1605.31 44.2131 1605.31 94.1481C1605.31 144.083 1564.99 184.655 1515.06 184.655ZM1515.06 137.321C1538.73 137.321 1557.97 118.075 1557.97 94.1481C1557.97 70.2209 1538.73 50.9751 1515.06 50.9751C1491.13 50.9751 1471.63 70.2209 1471.63 94.1481C1471.63 118.075 1491.13 137.321 1515.06 137.321Z" fill="currentColor"/>
         <path d="M1251.32 400C1157.69 400 1100.21 323.017 1100.21 200.26C1100.21 77.2432 1157.69 0 1251.32 0C1344.95 0 1402.42 76.9831 1402.42 200.26C1402.42 323.017 1344.95 400 1251.32 400ZM1251.32 343.303C1304.89 343.303 1337.4 289.207 1337.4 200.26C1337.4 110.793 1304.89 56.697 1251.32 56.697C1198 56.697 1165.23 110.793 1165.23 200.26C1165.23 289.207 1198 343.303 1251.32 343.303Z" fill="currentColor"/>
@@ -32,12 +32,12 @@
     </a>
     <nav aria-label="Main Navigation">
       <ul class="nav-links">
-        <li><a href="index.html">Bosh sahifa</a></li>
-        <li><a href="about.html">Biz Haqimizda</a></li>
-        <li><a href="services.html">Xizmatlar</a></li>
-        <li><a href="work.html">Loyihalar</a></li>
-        <li><a href="pricing.html">Narxlar</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="../../index.html">Bosh sahifa</a></li>
+        <li><a href="../../about.html" >Biz Haqimizda</a></li>
+        <li><a href="../../services.html">Xizmatlar</a></li>
+        <li><a href="../../work.html">Loyihalar</a></li>
+        <li><a href="../../pricing.html">Narxlar</a></li>
+        <li><a href="../../blog.html">Blog</a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -45,108 +45,62 @@
         <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <a href="contact.html" class="btn-contact">Brief Builder</a>
+      <a href="../../contact.html" class="btn-contact">Brief Builder</a>
     </div>
   </header>
-
   <div class="content-wrapper">
-    <!-- Blog Intro Header -->
-    <main class="hero-sec" style="padding-bottom: 60px;" id="blog-hero">
-      <span class="section-tag">[ INSIGHTS & IDEAS ]</span>
-      <h1 class="hero-h1">Dizayn va strategiya <span class="highlight">sirlari</span>.</h1>
-      <p class="hero-subtitle">
-        DID90° Agency ijodiy tajribasi va digital olamdagi so'nggi B2B tendensiyalari asosida yozilgan professional dizayn va brending tahlillari.
-      </p>
+    <!-- Subpage Hero Section -->
+    <main class="hero-sec" style="padding-bottom: 60px;">
+      <span class="section-tag">[ LEGAL AGREEMENTS ]</span>
+      <h1 class="hero-h1">Maxfiylik siyosati va <span class='highlight'>xavfsizlik</span>.</h1>
     </main>
 
-    <!-- Blog Grid List (Dynamic & Filterable) -->
-    <section id="blog-posts-list">
-      <!-- Category Filter Pills -->
-      <div class="brief-options-box" style="margin-bottom: 50px; justify-content: center;" id="blog-filters-container">
-        <button class="brief-opt-btn active" data-filter="ALL">BARCHASI</button>
-        <button class="brief-opt-btn" data-filter="UX DESIGN">UX DESIGN</button>
-        <button class="brief-opt-btn" data-filter="CONTENT STRATEGY">CONTENT STRATEGY</button>
-        <button class="brief-opt-btn" data-filter="VISUAL DESIGN">VISUAL DESIGN</button>
+    <!-- Subpage Content Grid -->
+    <section>
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 15px;">
+        
+            <h2 class="section-h2">1. MA'LUMOTLARNI YIG'ISH</h2>
+            <p class="about-desc">
+                Biz siz tomoningizdan Brief Builder formasi orqali kiritilgan ism, email, telefon raqami va loyiha brifingi kabi ma'lumotlarni yig'amiz. Shuningdek, veb-saytimizdan foydalanish jarayonida IP-manzil va kuki (cookies) fayllari tahliliy maqsadlarda to'planishi mumkin.
+            </p>
+            
+            <h2 class="section-h2" style="margin-top: 40px;">2. MA'LUMOTLARDAN FOYDALANISH</h2>
+            <p class="about-desc">
+                To'plangan ma'lumotlar faqatgina quyidagi maqsadlarda ishlatiladi:
+                <br>• Loyiha brifingi bo'yicha siz bilan bog'lanish va takliflar tayyorlash;
+                <br>• Mijozlar bilan aloqalarni yaxshilash va xizmat ko'rsatish sifatini oshirish;
+                <br>• Veb-saytimizning qulayligi va ishlash tezligini tahlil qilish.
+            </p>
+            
+            <h2 class="section-h2" style="margin-top: 40px;">3. MA'LUMOTLAR XAVFSIZLIGI</h2>
+            <p class="about-desc">
+                Mijozlarimiz ma'lumotlari xavfsizligi biz uchun o'ta muhim. Biz sizning shaxsiy ma'lumotlaringizni hech qachon uchinchi shaxslarga sotmaymiz yoki tarqatmaymiz, qonun hujjatlarida nazarda tutilgan hollar bundan mustasno.
+            </p>
+            
+            <h2 class="section-h2" style="margin-top: 40px;">4. BOG'LANISH</h2>
+            <p class="about-desc">
+                Maxfiylik siyosati bo'yicha har qanday savollaringiz bo'lsa, hello@did90.uz elektron pochta manzili orqali biz bilan bog'lanishingiz mumkin.
+            </p>
+        
       </div>
-
-      <div class="blog-grid" style="margin-top: 0;" id="blog-posts-grid">
-        <!-- Dynamic posts will be rendered here by JavaScript -->
-      </div>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const grid = document.getElementById('blog-posts-grid');
-          const filtersContainer = document.getElementById('blog-filters-container');
-          let allPosts = [];
-
-          // Load posts from JSON
-          fetch('blog/posts.json')
-            .then(res => res.json())
-            .then(data => {
-              allPosts = data;
-              renderPosts('ALL');
-            })
-            .catch(err => {
-              console.error('Error loading posts:', err);
-              grid.innerHTML = '<p style="grid-column: span 3; text-align: center; color: var(--text-muted);">Maqolalarni yuklashda xatolik yuz berdi.</p>';
-            });
-
-          // Filter buttons action
-          if (filtersContainer) {
-            filtersContainer.querySelectorAll('[data-filter]').forEach(btn => {
-              btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                filtersContainer.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                renderPosts(btn.dataset.filter);
-              });
-            });
-          }
-
-          function renderPosts(filter) {
-            grid.innerHTML = '';
-            const filtered = filter === 'ALL' ? allPosts : allPosts.filter(p => p.topic === filter);
-
-            if (filtered.length === 0) {
-              grid.innerHTML = '<p style="grid-column: span 3; text-align: center; color: var(--text-muted); padding: 40px 0;">Ushbu ruknda hozircha maqolalar mavjud emas.</p>';
-              return;
-            }
-
-            filtered.forEach(post => {
-              const card = document.createElement('a');
-              card.href = 'blog/' + (post.slug || post.id) + '/';
-              card.className = 'blog-card reveal-on-scroll active';
-              card.innerHTML = `
-                <div class="blog-header-placeholder">
-                  <div class="blog-mesh"></div>
-                  <span class="blog-topic-tag">${post.topic}</span>
-                </div>
-                <div class="blog-body">
-                  <div>
-                    <div class="blog-meta-row">
-                      <span>By ${post.author}</span>
-                      <span>•</span>
-                      <span>${post.date}</span>
-                    </div>
-                    <h3 class="blog-title-h4">${post.title}</h3>
-                    <p class="blog-teaser">${post.teaser}</p>
-                  </div>
-                  <span class="blog-read-more">Maqolani o'qish →</span>
-                </div>
-              `;
-              grid.appendChild(card);
-            });
-          }
-        });
-      </script>
     </section>
 
-    <!-- Real Footer Links -->
-    <footer id="main-footer">
+    <!-- Project Footer Callout -->
+    <section class="footer-cta-sec reveal-on-scroll">
+      <div class="footer-cta-card">
+        <h2 class="footer-cta-title">TO'G'RI DARAJADA ISHLAShGA TAYYORMIZ</h2>
+        <p class="footer-cta-desc">
+          Bizning tajribamiz biznesingizni yangi o'sish darajasiga olib chiqish uchun ishlaydi. Brifingizni yarating va loyihangizni boshlang.
+        </p>
+        <a href="../../contact.html" class="btn-primary">Loyihani boshlash</a>
+      </div>
+    </section>
+
+<footer id="main-footer">
       <div class="footer-main-grid">
         <div class="footer-left-col">
-          <a href="index.html" class="footer-brand">DID90°</a>
-          <p class="footer-brand-desc">
+          <a href="../../index.html" class="footer-brand">DID90°</a>
+          <p class="footer-brand-desc" data-cms="footer.brandDesc">
             Shveytsariya minimalistligi va to'q minimalist uslubdagi premium digital dizayn studiyasi.
           </p>
         </div>
@@ -154,10 +108,10 @@
         <div class="footer-links-col">
           <h6 class="footer-col-h6">MENULAR</h6>
           <ul class="footer-col-links">
-            <li><a href="about.html">Biz Haqimizda</a></li>
-            <li><a href="services.html">Xizmatlar</a></li>
-            <li><a href="work.html">Loyihalar</a></li>
-            <li><a href="pricing.html">Narxlar</a></li>
+            <li><a href="../../about.html">Biz Haqimizda</a></li>
+            <li><a href="../../services.html">Xizmatlar</a></li>
+            <li><a href="../../work.html">Loyihalar</a></li>
+            <li><a href="../../pricing.html">Narxlar</a></li>
           </ul>
         </div>
 
@@ -174,12 +128,12 @@
         <div class="footer-right-col">
           <h6 class="footer-col-h6">ALOQA</h6>
           <div class="footer-contact-item">
-            Email: <a href="mailto:hello@did90.uz">hello@did90.uz</a>
+            Email: <a href="mailto:hello@did90.uz" data-cms="contact.email">hello@did90.uz</a>
           </div>
           <div class="footer-contact-item">
-            Tel: <a href="tel:+998900000000">+998 (90) 000-00-00</a>
+            Tel: <a href="tel:+998900000000" data-cms="contact.phone">+998 (90) 000-00-00</a>
           </div>
-          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;">
+          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;" data-cms="contact.address">
             LOC: 41.3111° N, 69.2797° E <br>
             TASHKENT, UZBEKISTAN
           </div>
@@ -194,6 +148,7 @@
 
   </div>
 
-  <script src="app.js"></script>
+  <script src="cms-core.js"></script>
+  <script src="../../app.js"></script>
 </body>
 </html>

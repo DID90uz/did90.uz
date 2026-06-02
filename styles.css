@@ -7,46 +7,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --bg-color: #002B1D; /* Deep Forest Green-Black */
-  --bg-dark: #002216; /* Lighter Deep Forest */
-  --bg-card: #003625; /* Card Deep Sage-Forest */
+  --bg-color: #010604; /* Obsidian Green-Black solid fallback */
+  --bg-gradient: radial-gradient(circle at 50% 0%, #081D15 0%, #010604 100%);
+  --bg-dark: #000000; /* Deep Obsidian Black */
+  --bg-card: rgba(8, 29, 21, 0.35); /* Elegant translucent card */
   --text-color: #F3F6F3; /* Mint Paper White */
-  --text-muted: #A1CBA4; /* Soft Sage Green */
-  --text-dark: #6D8E73; /* Muted Leaf Sage */
-  --accent-color: #A1CBA4; /* Active Sage Green accent */
-  --border-color: #003F2C; /* Deep Sage Grid lines */
-  --border-light: #004D36; /* Lighter Sage Grid lines */
+  --text-muted: #8EAE96; /* Calming Soft Sage Gray */
+  --text-dark: #587561; /* Darker Sage Footnotes */
+  --accent-color: #10B981; /* Premium Active Emerald Green (20% color balance) */
+  --border-color: rgba(16, 185, 129, 0.08); /* Ultra-thin grid separators */
+  --border-light: rgba(16, 185, 129, 0.15); /* Light interactive borders */
   --font-family: 'Inter', sans-serif;
   --transition-speed: 0.3s;
   --cursor-size: 20px;
-  --header-bg: rgba(0, 43, 29, 0.75);
+  --header-bg: rgba(1, 6, 4, 0.75);
   
   /* Dynamic helper tokens */
-  --btn-text-color: #002B1D;
-  --accent-glow: rgba(161, 203, 164, 0.2);
-  --accent-glow-strong: rgba(161, 203, 164, 0.4);
-  --accent-light: rgba(161, 203, 164, 0.1);
-  --subtle-decor: rgba(255, 255, 255, 0.05);
+  --btn-text-color: #010604;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --accent-glow-strong: rgba(16, 185, 129, 0.3);
+  --accent-light: rgba(16, 185, 129, 0.08);
+  --subtle-decor: rgba(255, 255, 255, 0.03);
 }
 
 html[data-theme="light"] {
-  --bg-color: #F3F6F3; /* Pale Sage Off-White */
+  --bg-color: #F3F6F3; /* Pale Sage Off-White solid fallback */
+  --bg-gradient: linear-gradient(180deg, #F3F6F3 0%, #E2EAE3 100%);
   --bg-dark: #FFFFFF; /* Stark White background */
   --bg-card: #FFFFFF; /* Stark White Card */
-  --text-color: #002B1D; /* Deep Green-Black text */
-  --text-muted: #005F43; /* Deep Forest accent text */
-  --text-dark: #6D8E73; /* Sage green muted */
-  --accent-color: #005F43; /* Deep Forest Green accent */
+  --text-color: #081D15; /* Deep Organic Forest text */
+  --text-muted: #065F46; /* Deep Emerald accent text */
+  --text-dark: #587561; /* Sage green muted text */
+  --accent-color: #059669; /* Active Emerald/Forest accent */
   --border-color: #D3DDD4; /* Soft Leaf Sage Border */
   --border-light: #E1E6E1; /* Extremely Soft Border */
   --header-bg: rgba(243, 246, 243, 0.8);
   
   /* Dynamic helper tokens */
   --btn-text-color: #FFFFFF;
-  --accent-glow: rgba(0, 95, 67, 0.15);
-  --accent-glow-strong: rgba(0, 95, 67, 0.3);
-  --accent-light: rgba(0, 95, 67, 0.08);
-  --subtle-decor: rgba(0, 43, 29, 0.05);
+  --accent-glow: rgba(5, 150, 105, 0.15);
+  --accent-glow-strong: rgba(5, 150, 105, 0.3);
+  --accent-light: rgba(5, 150, 105, 0.08);
+  --subtle-decor: rgba(8, 29, 21, 0.03);
 }
 
 * {
@@ -57,7 +59,8 @@ html[data-theme="light"] {
 }
 
 html, body {
-  background-color: var(--bg-color);
+  background: var(--bg-gradient) var(--bg-color);
+  background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--font-family);
   font-optical-sizing: auto;
@@ -67,6 +70,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 /* Custom Selection */
@@ -499,6 +503,7 @@ section {
 
 .project-card:hover {
   border-color: var(--accent-color);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 100%);
 }
 
 .project-image-box {
@@ -603,6 +608,8 @@ section {
 
 .pricing-card:hover {
   transform: translateY(-5px);
+  border-color: var(--accent-color);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 100%);
 }
 
 .pricing-card.popular {
@@ -1178,6 +1185,7 @@ footer {
 
 .blog-card:hover {
   border-color: var(--accent-color);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 100%);
 }
 
 .blog-header-placeholder {
