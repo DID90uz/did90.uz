@@ -133,12 +133,23 @@
     .btn-delete:hover {
       opacity: 0.8;
     }
+    
+    /* Restore standard browser cursor for visual CMS admin usability */
+    * {
+      cursor: auto !important;
+    }
+    a, button, select, option, .btn-primary, .btn-secondary, .btn-delete, .admin-post-edit-btn {
+      cursor: pointer !important;
+    }
+    input[type="text"], input[type="password"], input[type="date"], textarea {
+      cursor: text !important;
+    }
+    .custom-cursor {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
-
-  <!-- Custom Cursor Bracket Frame -->
-  <div class="custom-cursor" id="app-cursor" aria-hidden="true"></div>
 
   <!-- Sticky Glassmorphic Header Menu -->
   <header>
