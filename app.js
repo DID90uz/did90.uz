@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initCustomCursor();
   initActiveNavLink();
   initFAQAccordion();
@@ -247,3 +248,42 @@ function initScrollAnimations() {
 
   revealElements.forEach(el => observer.observe(el));
 }
+
+/**
+ * 6. Visual Theme Toggle Management
+ */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
+  
+  const currentTheme = localStorage.getItem('did90_theme') || 'dark';
+  
+  // Set initial theme attributes and update icon states
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateToggleIcons(currentTheme);
+  
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const activeTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = activeTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('did90_theme', newTheme);
+    updateToggleIcons(newTheme);
+  });
+  
+  function updateToggleIcons(theme) {
+    const sunIcon = toggleBtn.querySelector('.sun-icon');
+    const moonIcon = toggleBtn.querySelector('.moon-icon');
+    if (!sunIcon || !moonIcon) return;
+    
+    if (theme === 'light') {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+  }
+}
+

@@ -8,6 +8,10 @@
   <meta name="robots" content="noindex, nofollow">
   
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Instant theme restore to prevent flashing
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('did90_theme') || 'dark');
+  </script>
   <style>
     /* Unique layout styles for the visual editor */
     .admin-gate {
@@ -228,7 +232,13 @@
       </svg>
     </a>
     <span class="section-tag" style="margin-bottom: 0;">[ DID90° Visual CMS ]</span>
-    <button class="btn-secondary" id="logout-btn" style="display:none; padding: 8px 20px; font-size: 11px;">Chiqish</button>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Mavzuni o'zgartirish" style="background:none; border:1px solid var(--border-light); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--text-color); cursor:pointer; transition:background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button class="btn-secondary" id="logout-btn" style="display:none; padding: 8px 20px; font-size: 11px;">Chiqish</button>
+    </div>
   </header>
 
   <div class="content-wrapper">
@@ -799,6 +809,9 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize theme toggling for CMS
+      initCMSThemeToggle();
+
       // Configuration variables
       const OWNER = 'DID90uz';
       const REPO = 'did90.uz';
@@ -1425,6 +1438,42 @@
       
       // Load default date for new posts
       document.getElementById('edit-date').value = new Date().toISOString().split('T')[0];
+
+      // Theme toggle engine for CMS
+      function initCMSThemeToggle() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (!toggleBtn) return;
+        
+        const currentTheme = localStorage.getItem('did90_theme') || 'dark';
+        
+        // Set initial theme attributes and update icon states
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateToggleIcons(currentTheme);
+        
+        toggleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const activeTheme = document.documentElement.getAttribute('data-theme');
+          const newTheme = activeTheme === 'light' ? 'dark' : 'light';
+          
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('did90_theme', newTheme);
+          updateToggleIcons(newTheme);
+        });
+        
+        function updateToggleIcons(theme) {
+          const sunIcon = toggleBtn.querySelector('.sun-icon');
+          const moonIcon = toggleBtn.querySelector('.moon-icon');
+          if (!sunIcon || !moonIcon) return;
+          
+          if (theme === 'light') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+          } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+          }
+        }
+      }
     });
   </script>
 </body>

@@ -21,6 +21,18 @@
   --cursor-size: 20px;
 }
 
+html[data-theme="light"] {
+  --bg-color: #ffffff;
+  --bg-dark: #f6f6f6;
+  --bg-card: #fafafa;
+  --text-color: #000000;
+  --text-muted: #555555;
+  --text-dark: #8c8c8c;
+  --accent-color: #ebff00;
+  --border-color: #e5e5e5;
+  --border-light: #dcdcdc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1540,3 +1552,75 @@ textarea.form-input {
     flex-direction: column;
   }
 }
+
+/* --- SWISS LIGHT THEME OVERRIDES --- */
+html[data-theme="light"] ::selection {
+  background-color: #000000;
+  color: #ebff00;
+}
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+html[data-theme="light"] .custom-cursor {
+  border-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+html[data-theme="light"] .custom-cursor::after {
+  background-color: #000000;
+}
+html[data-theme="light"] .custom-cursor.hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+html[data-theme="light"] .custom-cursor.hover::after {
+  color: #000000;
+}
+html[data-theme="light"] .btn-secondary:hover {
+  background-color: #f0f0f0;
+}
+html[data-theme="light"] .project-mesh {
+  opacity: 0.08;
+  background-image: linear-gradient(to right, #000000 1px, transparent 1px),
+                    linear-gradient(to bottom, #000000 1px, transparent 1px);
+}
+html[data-theme="light"] .project-card:hover .project-mesh {
+  opacity: 0.18;
+}
+html[data-theme="light"] .price-features-list li::before {
+  color: #000000;
+}
+html[data-theme="light"] .faq-item.active .faq-icon-box {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+html[data-theme="light"] .footer-cta-card::before {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+html[data-theme="light"] .form-input {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #e5e5e5;
+}
+html[data-theme="light"] .form-input:focus {
+  border-color: #000000;
+}
+html[data-theme="light"] .admin-post-item:hover .admin-post-edit-btn, 
+html[data-theme="light"] .admin-post-item.active .admin-post-edit-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+html[data-theme="light"] .admin-post-item:hover, 
+html[data-theme="light"] .admin-post-item.active {
+  border-color: #000000;
+}
+html[data-theme="light"] .tab-btn.active {
+  border-bottom-color: #000000;
+  color: #000000;
+}
+
