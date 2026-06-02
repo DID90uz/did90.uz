@@ -44,9 +44,9 @@
   <div class="content-wrapper">
     <!-- Contact Page Header -->
     <main class="hero-sec" style="padding-bottom: 60px;" id="contact-hero">
-      <span class="section-tag">[ GET IN TOUCH ]</span>
-      <h1 class="hero-h1">Keling, birgalikda <span class="highlight">yangi loyiha</span> boshlaymiz.</h1>
-      <p class="hero-subtitle">
+      <span class="section-tag" data-cms="contact.heroTag">[ GET IN TOUCH ]</span>
+      <h1 class="hero-h1" data-cms="contact.heroTitle">Keling, birgalikda <span class="highlight">yangi loyiha</span> boshlaymiz.</h1>
+      <p class="hero-subtitle" data-cms="contact.heroSubtitle">
         Muloqotimizni ortiqcha gaplarsiz va shaffof brif orqali boshlaymiz. O'z brifingizni tayyorlang va loyihani to'g'ri darajaga buring.
       </p>
     </main>
@@ -56,8 +56,8 @@
       
       <!-- Left Column: Form Details -->
       <div class="contact-left-form">
-        <span class="section-tag">01 // MA'LUMOTLARINGIZ</span>
-        <h2 class="section-h2" style="font-size: 28px; margin-bottom: 30px;">SHAXSIY MA'LUMOTLAR</h2>
+        <span class="section-tag" data-cms="contact.tag">01 // MA'LUMOTLARINGIZ</span>
+        <h2 class="section-h2" style="font-size: 28px; margin-bottom: 30px;" data-cms="contact.title">SHAXSIY MA'LUMOTLAR</h2>
         
         <form id="contact-details-form" onsubmit="return false;">
           <div class="form-group">
@@ -78,7 +78,7 @@
       <!-- Right Column: Brief Builder Workspace -->
       <div class="contact-right-workspace">
         <span class="section-tag">02 // BRIEF BUILDER WORKSPACE</span>
-        <h2 class="section-h2" style="font-size: 28px; margin-bottom: 30px;">LOYA BRIF KONSEPTI</h2>
+        <h2 class="section-h2" style="font-size: 28px; margin-bottom: 30px;">LOYA BRIEF KONSEPTI</h2>
 
         <!-- Service Choice Toggles -->
         <div class="form-group">
@@ -112,7 +112,7 @@
           <pre class="brief-display-content" id="brief-summary-text"></pre>
           <div class="brief-btn-row">
             <button class="btn-secondary" id="copy-brief-btn" style="flex-grow: 1; justify-content: center; padding: 14px 0;">BRIF MATNINI NUSXALASH</button>
-            <button class="btn-primary" id="submit-brief-btn" style="flex-grow: 1; justify-content: center; padding: 14px 0;">TAYYOR BRIFNI YUBORISH</button>
+            <button class="btn-primary" id="submit-brief-btn" style="flex-grow: 1; justify-content: center; padding: 14px 0;">TAYYOR BRIEFNI YUBORISH</button>
           </div>
         </div>
 
@@ -124,7 +124,7 @@
       <div class="footer-main-grid">
         <div class="footer-left-col">
           <a href="index.html" class="footer-brand">DID90°</a>
-          <p class="footer-brand-desc">
+          <p class="footer-brand-desc" data-cms="footer.brandDesc">
             Shveytsariya minimalistligi va to'q minimalist uslubdagi premium digital dizayn studiyasi.
           </p>
         </div>
@@ -152,12 +152,12 @@
         <div class="footer-right-col">
           <h6 class="footer-col-h6">ALOQA</h6>
           <div class="footer-contact-item">
-            Email: <a href="mailto:hello@did90.uz">hello@did90.uz</a>
+            Email: <a href="mailto:hello@did90.uz" data-cms="contact.email">hello@did90.uz</a>
           </div>
           <div class="footer-contact-item">
-            Tel: <a href="tel:+998900000000">+998 (90) 000-00-00</a>
+            Tel: <a href="tel:+998900000000" data-cms="contact.phone">+998 (90) 000-00-00</a>
           </div>
-          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;">
+          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;" data-cms="contact.address">
             LOC: 41.3111° N, 69.2797° E <br>
             TASHKENT, UZBEKISTAN
           </div>
@@ -172,6 +172,7 @@
 
   </div>
 
+  <script src="cms-core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,187 @@
+{
+  "home": {
+    "trustpilotCount": "59+ Sharhlar",
+    "trustpilotPlatform": "Trustpilot-da",
+    "heroTitle": "Loyihangizni <span class=\"highlight\">to'g'ri darajaga</span> buring.",
+    "heroSubtitle": "Zamonaviy B2B dizayn va brending studiyasi. Shveytsariya minimalizmi va qat'iy asimmetrik gridlar asosida loyihalaringizni perpendikulyar va yorqin darajaga buramiz.",
+    "stat1Number": "70+",
+    "stat1Title": "SaaS Startaplar",
+    "stat2Number": "100%",
+    "stat2Title": "Swiss Dark Minimalism",
+    "stat3Number": "4Y",
+    "stat3Title": "Kengayish Yillari",
+    "aboutTag": "01 // KONSEPTIMIZ",
+    "aboutTitle": "KUCHLI DIZAYN — TO'G'RI PERSPEKTIVADAN BOSHLANADI.",
+    "aboutDesc1": "Barcha odatiy 0° yoki 180° yo'nalishlarida to'g'ri harakat qilayotgan digital olamda, DID90° perpendikulyar, jasoratli va qat'iy yechimlarni taklif qiladi. Biz Shveytsariya maktabining tartib va geometriyaga bo'lgan yuksak muhabbatiga tayanamiz.",
+    "aboutDesc2": "Biz ortiqcha yuklamalar va chalg'ituvchi fluffs'larni butunlay rad etib, brendingizning asl mohiyatini yuzaga chiqaramiz. Shiorimiz: \"Loyihangizni to'g'ri darajaga burish uchun bizga bog'laning.\"",
+    "capabilitiesTag": "02 // IMKONIYATLAR",
+    "capabilitiesTitle": "BIZNING PASSION BIZNING ISHIMIZDIR.",
+    "capabilitiesDesc": "Biz zamonaviy startaplar va rivojlanayotgan bizneslar uchun mahsulotlar yaratadigan boutique raqamli studiyamiz. Har bir element ma'lum bir tartib va funksiyaga ega.",
+    "capabilities": [
+      {
+        "num": "[ 01 ]",
+        "title": "UI/UX & Product",
+        "desc": "Dinamik va yuqori konversiyali platformalar, murakkab boshqaruv panellari va minimalist veb-saytlar loyihalash."
+      },
+      {
+        "num": "[ 02 ]",
+        "title": "Brand Identity",
+        "desc": "Kompaniyangiz uchun qat'iy vizual qoidalar, geometrik logotiplar va to'laqonli minimalist brend tizimi."
+      },
+      {
+        "num": "[ 03 ]",
+        "title": "Framer Development",
+        "desc": "Figma chizmalarini bevosita yuqori tezlikda yuklanuvchi, interaktiv va animatsiyali Framer saytiga o'tkazish."
+      }
+    ],
+    "projectsTag": "03 // LOYIHALARIMIZ",
+    "projectsTitle": "SONGI IJODIY ISHLAR",
+    "pricingTag": "04 // TARIFLARIMIZ",
+    "pricingTitle": "RIVOJLANISH BOSQICHINGIZ UCHUN ANIQ NARXLAR",
+    "pricingDesc": "Loyihangiz hajmiga qarab eng to'g'ri rejani tanlang. Ortiqcha to'lovlarsiz, to'liq shaffof narxlar.",
+    "faqTag": "05 // FAQ",
+    "faqTitle": "TEZ-TEZ SO'RALADIGAN SAVOLLAR",
+    "faqDesc": "Biz bilan ishlash jarayoni haqida qisqacha ma'lumotlarga ega bo'ling.",
+    "faqs": [
+      {
+        "question": "Sizlar odatda qanday loyihalar bilan ishlaysizlar?",
+        "answer": "Biz asosan raqamli mahsulotlar (SaaS platforms, web & mobile applications), brand identity tizimlari, premium minimalist qadoqlash hamda dynamic marketing veb-saytlarini yaratamiz. Startaplardan tortib yirik korxonalargacha to'g'ri perspektivada ishlaymiz."
+      },
+      {
+        "question": "Oddiy loyihani tugatish qancha vaqt oladi?",
+        "answer": "Loyiha muddati uning hajmi va murakkabligiga qarab farq qiladi. Kichik va express landing page loyihalari 2-3 xafta ichida, to'liq brending va murakkab ko'p sahifali platformalar esa 4-12 xaftagacha davom etishi mumkin."
+      },
+      {
+        "question": "Sizlarning ishlash jarayoningiz qanaqa?",
+        "answer": "Jarayonimiz to'liq hamkorlikda va ketma-ketlikda boradi: Dastlab biznesingiz brifini o'rganamiz, keyin dizayn konsepsiyalari va prototiplarini chizamiz, oxirida ularni Framer yoki toza kodda mukammal darajaga keltirib yuklaymiz."
+      },
+      {
+        "question": "Loyiha tugagach, uni qo'llab-quvvatlaysizlarmi?",
+        "answer": "Ha, albatta. Biz barcha ishga tushirilgan loyihalarimiz uchun keyinchalik ham texnik yordam beramiz, kontentlarni yangilash, tezlikni optimallashtirish va yangi dizayn yechimlarini qo'shish imkoniyatlarini taqdim etamiz."
+      }
+    ],
+    "ctaTitle": "Keling, birgalikda <br><span class=\"highlight\">loyihangizni buramiz.</span>",
+    "ctaDesc": "Biz doimo aloqadamiz va har bir so'rovga juda tez javob beramiz. Loyihangizni boshlash uchun brif builderdan foydalaning yoki to'g'ridan-to'g'ri yozing."
+  },
+  "about": {
+    "heroTag": "[ MEET DID90° ]",
+    "heroTitle": "Biz raqamli <span class=\"highlight\">mukammallikni</span> quramiz.",
+    "heroSubtitle": "Tashqi chalg'ituvchi unsurlarsiz, faqatgina qat'iy tartib va aniq geometriyaga tayangan dizayn studiyasi. Bizning vazifamiz — loyihalarni to'g'ri darajaga burish.",
+    "historyTag": "01 // YUTUQLARIMIZ",
+    "historyTitle": "ZAMONAVIY VA AGILE DIZAYN JAMOASI.",
+    "historyDesc1": "DID90° Agency kichik boutique dizayn jamoasi sifatida boshlanib, qisqa muddat ichida O'zbekiston digital olamida o'ziga xos to'q minimalist swiss uslubi bilan tanildi. Jamoamiz a'zolari bir-birlaridan doimiy o'rganishadi va har bir yutuqni birgalikda orthogonal burchakda nishonlashadi.",
+    "historyDesc2": "Bizning yondashuvimiz har bir chiziq, piksel va element orqasidagi ma'noga bog'liq. Biz shaffoflik va tezkor aloqani qadrlaymiz.",
+    "timelineTag": "02 // TARAQQIYOTIMIZ",
+    "timelineTitle": "AMALGA OSHIRILGAN BOSQICHLAR",
+    "timeline": [
+      {
+        "year": "2026",
+        "title": "O'zbekiston bozorida DID90° brendining kengayishi",
+        "desc": "Dizayn xizmatlarini yagona portal ostida birlashtirdik. did90.uz domenini ishga tushirib, Swiss minimalist dark theme uslubida portfoliosini to'liq digital olamga taqdim etdik."
+      },
+      {
+        "year": "2025",
+        "title": "3D & Spatial dizayn yo'nalishi joriy etilishi",
+        "desc": "Mahsulotlarni fotorealistik va ultra-minimal 3D modellashtirish hamda maketlash yo'nalishini yo'lga qo'ydik. 20 dan ortiq SaaS kompaniyalar uchun yuz minglab foydalanuvchiga mo'ljallangan platformalarni loyihaladik."
+      },
+      {
+        "year": "2024",
+        "title": "Studiya asos solinishi",
+        "desc": "Bir nechta dynamic va mustaqil dizaynerlar hamkorligida boutique studiya tashkil qilindi. Swiss typographic layout qoidalariga asoslangan holda dastlabki brandbook loyihalarini taqdim etdik."
+      }
+    ],
+    "strategyTag": "03 // STRATEGIYAMIZ",
+    "strategyTitle": "ISHGA BO'LGAN YONDASHUVIMIZ",
+    "strategy": [
+      {
+        "num": "[ STEP 01 ]",
+        "title": "Tahlil & Auditing",
+        "desc": "Loyihangiz maqsadi va mijozlaringiz muammolarini o'rganamiz. Ortiqcha yuklamalar va chalg'ituvchi fluffs'larni olib tashlaymiz."
+      },
+      {
+        "num": "[ STEP 02 ]",
+        "title": "Orthogonal Konsept",
+        "desc": "Dizaynga 90 daraja boshqacha burchak ostida qaraymiz. Minimalist gridlar va yorqin yechimlar bilan interaktiv maket chizamiz."
+      },
+      {
+        "num": "[ STEP 03 ]",
+        "title": "Swiss Engineering",
+        "desc": "Yozilgan dizaynni bevosita toza koddagi dynamic sayt yoki Framer platformasiga o'tkazib, mukammal integratsiya bilan taqdim etamiz."
+      }
+    ],
+    "teamTag": "05 // JAMOA",
+    "teamTitle": "MUKAMMALIK ORQASIDAGI INSONLAR",
+    "team": [
+      {
+        "letters": "ST",
+        "name": "Siroj Turgunboyev",
+        "role": "Founder & Creative Director"
+      },
+      {
+        "letters": "AA",
+        "name": "Aziz Alimov",
+        "role": "Head of UI/UX Design"
+      },
+      {
+        "letters": "MR",
+        "name": "Madina Rahimova",
+        "role": "Motion & Video Lead"
+      },
+      {
+        "letters": "BU",
+        "name": "Bekzod Umarov",
+        "role": "Framer & Frontend Developer"
+      }
+    ]
+  },
+  "services": {
+    "heroTag": "[ WHAT WE DO ]",
+    "heroTitle": "Raqamli yechimlarni <span class=\"highlight\">orthogonal</span> darajaga buramiz.",
+    "heroSubtitle": "Sizning brend identity, qadoqlash, interfeys, 3D va motion animatsiyalaringiz uchun eng to'liq va mukammal professional Shveytsariya dizayn xizmatlari to'plami.",
+    "panel1Title": "Branding & Identity",
+    "panel1Desc": "Kompaniyangiz brendining mustahkam vizual fundamenti. Biz sizning falsafangiz, logotipingiz, shrift tizimingiz va qat'iy vizual kitoblaringizni (Brandbook) Swiss minimalist uslubda loyihalaymiz.",
+    "panel2Title": "Packaging Design",
+    "panel2Desc": "Mahsulotingizning jismoniy dunyodagi birinchi taassuroti. Biz shisha, karton, metall yoki qog'oz qutilar dizaynini ularning geometriyasiga, minimalizm va Swiss typographic qoidalariga moslab chizamiz.",
+    "panel3Title": "UI/UX & Digital Design",
+    "panel3Desc": "Foydalanuvchilar yoqtiradigan raqamli platformalar. Biz B2B SaaS mahsulotlar, mobil ilovalar va dynamic landing page'lar dizaynini qat'iy 12-ustunli asimmetrik grid asosida ishlaymiz.",
+    "panel4Title": "Graphic Design & Marketing",
+    "panel4Desc": "Ijtimoiy tarmoqlar, reklama kampaniyalari va taqdimotlar uchun to'g'ri chiziqli grafikalar va posterlar tayyorlash. Har bir vizual element ma'lum bir tartibga va funksional maqsadga ega.",
+    "panel5Title": "3D Design & Product",
+    "panel5Desc": "Mahsulotlaringizni fotorealistik va ultra-minimal 3D vizualizatsiya ko'rinishiga keltirish. Har bir chiziq va yorug'lik nuqtasi mahsulotning haqiqiy shaklini yuqori darajada ko'rsatishga qaratilgan.",
+    "panel6Title": "Motion Design & Video",
+    "panel6Desc": "Dinamik va kinetik tipografik animatsiyalar orqali brendingizni harakatga keltiramiz. Har bir harakat, siljish va burchak sizning loyihangizning professional darajasini namoyish etadi."
+  },
+  "pricing": {
+    "heroTag": "[ PRICING OPTIONS ]",
+    "heroTitle": "O'sish bosqichingiz uchun <span class=\"highlight\">aniq tariflar</span>.",
+    "heroSubtitle": "Barcha loyihalar shaffof baholanadi. Yashirin xarajatlarsiz va ortiqcha to'lovlarsiz startapingizni professional darajaga chiqaring.",
+    "package1Name": "Essential",
+    "package1Price": "$1999",
+    "package1Period": "/ Boshlanishi",
+    "package1Desc": "Yangi va kichik dynamic startaplar uchun eng tezkor va chiroyli minimalist yechim.",
+    "package1Features": "1 ta Landing Page dizayni, Minimal brend identity tizimi, Framer-da yuqori tezlikdagi dasturlash, 2 revision (tuzatish) imkoniyati",
+    "package2Name": "Growth",
+    "package2Price": "$3999",
+    "package2Period": "/ Loyiha",
+    "package2Desc": "Kengayayotgan B2B startaplar va professional jamoalar uchun to'liq paket.",
+    "package2Features": "5 sahifagacha bo'lgan Veb-sayt dizayni, Kengaytirilgan Brandbook kitobi, Kinetik tipografik Motion dizayn, Cheksiz revisions (loyihalash davrida)",
+    "package3Name": "Scale",
+    "package3Price": "$6999",
+    "package3Period": "/ Loyiha",
+    "package3Desc": "Katta va murakkab tizimlar, 3D vizualizatsiya hamda to'liq strategiya.",
+    "package3Features": "Murakkab ko'p sahifali veb platforma, Mahsulotlar uchun 3D model dizaynlari, To'laqonli video va motion ishlab chiqarish, 1 yillik texnik qo'llab-quvvatlash"
+  },
+  "contact": {
+    "heroTag": "[ GET IN TOUCH ]",
+    "heroTitle": "Keling, birgalikda <span class=\"highlight\">yangi loyiha</span> boshlaymiz.",
+    "heroSubtitle": "Muloqotimizni ortiqcha gaplarsiz va shaffof brif orqali boshlaymiz. O'z brifingizni tayyorlang va loyihani to'g'ri darajaga buring.",
+    "tag": "01 // MA'LUMOTLARINGIZ",
+    "title": "SHAXSIY MA'LUMOTLAR",
+    "email": "hello@did90.uz",
+    "phone": "+998 (90) 000-00-00",
+    "address": "LOC: 41.3111° N, 69.2797° E <br> TASHKENT, UZBEKISTAN"
+  },
+  "footer": {
+    "brandDesc": "Shveytsariya minimalistligi va to'q minimalist uslubdagi premium digital dizayn studiyasi."
+  }
+}

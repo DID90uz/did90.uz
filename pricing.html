@@ -45,8 +45,8 @@
     <!-- Pricing Page Main Intro -->
     <main class="hero-sec" style="padding-bottom: 60px;" id="pricing-hero">
       <span class="section-tag">[ PRICING OPTIONS ]</span>
-      <h1 class="hero-h1">O'sish bosqichingiz uchun <span class="highlight">aniq tariflar</span>.</h1>
-      <p class="hero-subtitle">
+      <h1 class="hero-h1" data-cms="pricing.heroTitle">O'sish bosqichingiz uchun <span class="highlight">aniq tariflar</span>.</h1>
+      <p class="hero-subtitle" data-cms="pricing.heroSubtitle">
         Barcha loyihalar shaffof baholanadi. Yashirin xarajatlarsiz va ortiqcha to'lovlarsiz startapingizni professional darajaga chiqaring.
       </p>
     </main>
@@ -57,10 +57,10 @@
         <!-- Package 1 -->
         <div class="pricing-card">
           <div>
-            <span class="price-tier-name">Essential</span>
-            <div class="price-amount">$1999 <span class="period">/ Boshlanishi</span></div>
-            <p class="price-desc">Yangi va kichik dynamic startaplar uchun eng tezkor va chiroyli minimalist yechim.</p>
-            <ul class="price-features-list">
+            <span class="price-tier-name" data-cms="pricing.package1Name">Essential</span>
+            <div class="price-amount"><span data-cms="pricing.package1Price">$1999</span> <span class="period" data-cms="pricing.package1Period">/ Boshlanishi</span></div>
+            <p class="price-desc" data-cms="pricing.package1Desc">Yangi va kichik dynamic startaplar uchun eng tezkor va chiroyli minimalist yechim.</p>
+            <ul class="price-features-list" data-cms="pricing.package1Features">
               <li>1 ta Landing Page dizayni</li>
               <li>Minimal brend identity tizimi</li>
               <li>Framer-da yuqori tezlikdagi dasturlash</li>
@@ -73,10 +73,10 @@
         <div class="pricing-card popular">
           <span class="popular-tag">TAVSIYA ETILADI</span>
           <div>
-            <span class="price-tier-name" style="color: var(--accent-color);">Growth</span>
-            <div class="price-amount">$3999 <span class="period">/ Loyiha</span></div>
-            <p class="price-desc">Kengayayotgan B2B startaplar va professional jamoalar uchun to'liq paket.</p>
-            <ul class="price-features-list">
+            <span class="price-tier-name" style="color: var(--accent-color);" data-cms="pricing.package2Name">Growth</span>
+            <div class="price-amount"><span data-cms="pricing.package2Price">$3999</span> <span class="period" data-cms="pricing.package2Period">/ Loyiha</span></div>
+            <p class="price-desc" data-cms="pricing.package2Desc">Kengayayotgan B2B startaplar va professional jamoalar uchun to'liq paket.</p>
+            <ul class="price-features-list" data-cms="pricing.package2Features">
               <li>5 sahifagacha bo'lgan Veb-sayt dizayni</li>
               <li>Kengaytirilgan Brandbook kitobi</li>
               <li>Kinetik tipografik Motion dizayn</li>
@@ -88,10 +88,10 @@
         <!-- Package 3 -->
         <div class="pricing-card">
           <div>
-            <span class="price-tier-name">Scale</span>
-            <div class="price-amount">$6999 <span class="period">/ Loyiha</span></div>
-            <p class="price-desc">Katta va murakkab tizimlar, 3D vizualizatsiya hamda to'liq strategiya.</p>
-            <ul class="price-features-list">
+            <span class="price-tier-name" data-cms="pricing.package3Name">Scale</span>
+            <div class="price-amount"><span data-cms="pricing.package3Price">$6999</span> <span class="period" data-cms="pricing.package3Period">/ Loyiha</span></div>
+            <p class="price-desc" data-cms="pricing.package3Desc">Katta va murakkab tizimlar, 3D vizualizatsiya hamda to'liq strategiya.</p>
+            <ul class="price-features-list" data-cms="pricing.package3Features">
               <li>Murakkab ko'p sahifali veb platforma</li>
               <li>Mahsulotlar uchun 3D model dizaynlari</li>
               <li>To'laqonli video va motion ishlab chiqarish</li>
@@ -177,7 +177,7 @@
       <div class="footer-main-grid">
         <div class="footer-left-col">
           <a href="index.html" class="footer-brand">DID90°</a>
-          <p class="footer-brand-desc">
+          <p class="footer-brand-desc" data-cms="footer.brandDesc">
             Shveytsariya minimalistligi va to'q minimalist uslubdagi premium digital dizayn studiyasi.
           </p>
         </div>
@@ -205,12 +205,12 @@
         <div class="footer-right-col">
           <h6 class="footer-col-h6">ALOQA</h6>
           <div class="footer-contact-item">
-            Email: <a href="mailto:hello@did90.uz">hello@did90.uz</a>
+            Email: <a href="mailto:hello@did90.uz" data-cms="contact.email">hello@did90.uz</a>
           </div>
           <div class="footer-contact-item">
-            Tel: <a href="tel:+998900000000">+998 (90) 000-00-00</a>
+            Tel: <a href="tel:+998900000000" data-cms="contact.phone">+998 (90) 000-00-00</a>
           </div>
-          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;">
+          <div class="footer-contact-item" style="color: var(--text-dark); margin-top: 15px; font-size: 11px;" data-cms="contact.address">
             LOC: 41.3111° N, 69.2797° E <br>
             TASHKENT, UZBEKISTAN
           </div>
@@ -225,6 +225,7 @@
 
   </div>
 
+  <script src="cms-core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
