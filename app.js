@@ -304,14 +304,33 @@ function initProjectPreviews() {
       const previewUrl = row.getAttribute('data-preview');
       if (previewUrl) {
         floatingImg.src = previewUrl;
+        
+        // Position it exactly centered over the year element
+        const yearEl = row.querySelector('.project-row-year');
+        if (yearEl) {
+          const rect = yearEl.getBoundingClientRect();
+          const yearCenterX = rect.left + rect.width / 2;
+          const yearCenterY = rect.top + rect.height / 2;
+          
+          floatingPreview.style.left = `${yearCenterX}px`;
+          floatingPreview.style.top = `${yearCenterY}px`;
+        }
+        
         floatingPreview.classList.add('active');
       }
     });
 
-    row.addEventListener('mousemove', (e) => {
-      // position is fixed, align centered or slightly offset to cursor
-      floatingPreview.style.left = `${e.clientX}px`;
-      floatingPreview.style.top = `${e.clientY}px`;
+    row.addEventListener('mousemove', () => {
+      // Keep it anchored centered over the year element
+      const yearEl = row.querySelector('.project-row-year');
+      if (yearEl) {
+        const rect = yearEl.getBoundingClientRect();
+        const yearCenterX = rect.left + rect.width / 2;
+        const yearCenterY = rect.top + rect.height / 2;
+        
+        floatingPreview.style.left = `${yearCenterX}px`;
+        floatingPreview.style.top = `${yearCenterY}px`;
+      }
     });
 
     row.addEventListener('mouseleave', () => {
