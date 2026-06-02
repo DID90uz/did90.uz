@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initBriefBuilder();
   initScrollAnimations();
+  initProjectPreviews();
 });
 
 /**
@@ -285,5 +286,36 @@ function initThemeToggle() {
       moonIcon.style.display = 'none';
     }
   }
+}
+
+/**
+ * 7. Interactive projects list with floating image previews on hover
+ */
+function initProjectPreviews() {
+  const projectRows = document.querySelectorAll('.project-row');
+  const floatingPreview = document.getElementById('floating-preview');
+  const floatingImg = document.getElementById('floating-img');
+
+  if (!floatingPreview || !floatingImg) return;
+
+  projectRows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      const previewUrl = row.getAttribute('data-preview');
+      if (previewUrl) {
+        floatingImg.src = previewUrl;
+        floatingPreview.classList.add('active');
+      }
+    });
+
+    row.addEventListener('mousemove', (e) => {
+      // position is fixed, align centered or slightly offset to cursor
+      floatingPreview.style.left = `${e.clientX}px`;
+      floatingPreview.style.top = `${e.clientY}px`;
+    });
+
+    row.addEventListener('mouseleave', () => {
+      floatingPreview.classList.remove('active');
+    });
+  });
 }
 

@@ -61,160 +61,256 @@
 
   <div class="content-wrapper">
     <!-- Main Hero Workspace Section -->
-    <main class="hero-sec" id="hero-content">
-      <div class="trustpilot-badge">
-        <span data-cms="home.trustpilotCount">59+ Sharhlar</span>
-        <span class="stars">★★★★★</span>
-        <span data-cms="home.trustpilotPlatform">Trustpilot-da</span>
+    <main class="hero-sec" id="hero-content" style="align-items: flex-start; text-align: left; padding: 140px 0 100px 0; z-index: 10; position: relative;">
+      <div class="available-badge" style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 24px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #00D419; box-shadow: 0 0 10px #00D419;"></span>
+        Available for new project
       </div>
-      <h1 class="hero-h1" data-cms="home.heroTitle">Loyihangizni <span class="highlight">to'g'ri darajaga</span> buring.</h1>
-      <p class="hero-subtitle" data-cms="home.heroSubtitle">
-        Zamonaviy B2B dizayn va brending studiyasi. Shveytsariya minimalizmi va qat'iy asimmetrik gridlar asosida loyihalaringizni perpendikulyar va yorqin darajaga buramiz.
+      <h1 class="hero-h1" style="font-size: clamp(38px, 6.2vw, 84px); font-weight: 400; line-height: 1.05; letter-spacing: -0.03em; max-width: 1000px; text-transform: none; margin-bottom: 32px;">
+        Global Design Solutions<br>for SaaS Startups in Tashkent.
+      </h1>
+      <p class="hero-subtitle" style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-muted); max-width: 750px; line-height: 1.5; margin-bottom: 48px; text-align: left;">
+        Gain a competitive advantage through cutting edge product development, stunning web design, and impactful branding strategies that resonate with your audience.
       </p>
-      <div class="hero-btn-row">
-        <a href="contact.html" class="btn-primary">
-          Brifni boshlash
-          <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      
+      <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%; flex-wrap: wrap; gap: 30px;">
+        <a href="contact.html" class="btn-primary" style="background-color:#121212; border:1px solid rgba(255,255,255,0.15); color:#FFFFFF; border-radius:100px; padding:16px 36px; text-transform:none; font-size:15px; font-weight:500; display:inline-flex; align-items:center; gap:8px; box-shadow: 0 0 20px rgba(255,255,255,0.03); cursor: pointer;">
+          Book a Call <span style="font-size:16px;">↗</span>
         </a>
-        <a href="about.html" class="btn-secondary">Biz Haqimizda</a>
-      </div>
-
-      <!-- Stats banner -->
-      <div class="stats-banner" aria-label="Agency Statistics">
-        <div class="stat-item">
-          <div class="stat-number" data-cms="home.stat1Number">70+</div>
-          <div class="stat-title" data-cms="home.stat1Title">SaaS Startaplar</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-cms="home.stat2Number">100%</div>
-          <div class="stat-title" data-cms="home.stat2Title">Swiss Dark Minimalism</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-cms="home.stat3Number">4Y</div>
-          <div class="stat-title" data-cms="home.stat3Title">Kengayish Yillari</div>
+        <div class="trustpilot-hero-widget" style="display: flex; align-items: center; gap: 12px; text-align: left;">
+          <div class="avatars-overlap" style="display: flex; margin-right: -4px;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; margin-right: -8px; object-fit: cover;" alt="user">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; margin-right: -8px; object-fit: cover;" alt="user">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; object-fit: cover;" alt="user">
+          </div>
+          <div>
+            <div style="font-size: 13px; font-weight: 700; color: #FFFFFF;">59+ Reviews on <span style="color:#00D419;">★</span> <a href="https://trustpilot.com" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Trustpilot</a></div>
+            <div style="font-size: 11px; color: var(--text-muted);">Used by 70+ SaaS Startups</div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- About Summary Grid Row -->
-    <section class="about-grid-row reveal-on-scroll" id="about-summary">
-      <div class="about-left-col">
-        <span class="section-tag" data-cms="home.aboutTag">01 // KONSEPTIMIZ</span>
-        <h2 class="section-h2" data-cms="home.aboutTitle">KUCHLI DIZAYN — TO'G'RI PERSPEKTIVADAN BOSHLANADI.</h2>
+    <section class="about-grid-row reveal-on-scroll" id="about-summary" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; padding: 100px 0; z-index: 10; position: relative;">
+      <div class="about-left-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; height: 100%;">
+        <h2 class="section-h2" style="font-size: clamp(32px, 4.5vw, 64px); font-weight: 400; letter-spacing: -0.03em; text-transform: none; margin-bottom: 24px;">About Agency</h2>
+        <p class="about-desc" style="font-size: 18px; color: var(--text-muted); line-height: 1.5; margin-bottom: 30px;">
+          An international digital design studio reimagining how people connect with brands.
+        </p>
+        <a href="about.html" class="btn-primary" style="background-color:#121212; border:1px solid rgba(255,255,255,0.15); color:#FFFFFF; border-radius:100px; padding:12px 24px; text-transform:none; font-size:13px; font-weight:500; display:inline-flex; align-items:center; gap:8px;">
+          More About Us <span>↗</span>
+        </a>
       </div>
-      <div class="about-right-col">
-        <p class="about-desc" data-cms="home.aboutDesc1">
-          Barcha odatiy 0° yoki 180° yo'nalishlarida to'g'ri harakat qilayotgan digital olamda, DID90° perpendikulyar, jasoratli va qat'iy yechimlarni taklif qiladi. Biz Shveytsariya maktabining tartib va geometriyaga bo'lgan yuksak muhabbatiga tayanamiz.
+      <div class="about-right-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+        <p class="about-desc" style="font-size: clamp(16px, 1.8vw, 22px); line-height: 1.5; color: #FFFFFF; font-weight: 400; margin-bottom: 40px;">
+          Our agency consists of passionate individuals specializing in remarkable projects. We are a boutique agency that learns from each other and celebrates our successes.
         </p>
-        <p class="about-desc" data-cms="home.aboutDesc2">
-          Biz ortiqcha yuklamalar va chalg'ituvchi fluffs'larni butunlay rad etib, brendingizning asl mohiyatini yuzaga chiqaramiz. Shiorimiz: "Loyihangizni to'g'ri darajaga burish uchun bizga bog'laning."
-        </p>
-        <a href="about.html" class="btn-secondary" style="margin-top: 15px;">Batafsil o'qish</a>
+        
+        <!-- About Stats Grid (Matches Screenshot 2) -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; width: 100%;">
+          <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 140px;">
+            <div style="font-size: 11px; color: var(--text-muted); font-weight: 600; line-height: 1.3; text-transform: none; letter-spacing: 0;">Successfully Finished Projects</div>
+            <div style="font-size: 40px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.02em;">300+</div>
+          </div>
+          <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 140px;">
+            <div style="font-size: 11px; color: var(--text-muted); font-weight: 600; line-height: 1.3; text-transform: none; letter-spacing: 0;">DID90° Years of Growth</div>
+            <div style="font-size: 40px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.02em;">8Y</div>
+          </div>
+          <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 140px;">
+            <div style="font-size: 11px; color: var(--text-muted); font-weight: 600; line-height: 1.3; text-transform: none; letter-spacing: 0;">People on Board</div>
+            <div style="font-size: 40px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.02em;">50+</div>
+          </div>
+        </div>
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px 30px; text-align: left; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 75px;">
+          <div style="font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: none; letter-spacing: 0;">Design Awards That We Got</div>
+          <div style="font-size: 32px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.02em;">156+</div>
+        </div>
       </div>
     </section>
 
     <!-- Capabilities Grid -->
-    <section class="reveal-on-scroll" id="capabilities">
-      <div class="about-grid-row">
-        <div class="about-left-col">
-          <span class="section-tag" data-cms="home.capabilitiesTag">02 // IMKONIYATLAR</span>
-          <h2 class="section-h2" data-cms="home.capabilitiesTitle">BIZNING PASSION BIZNING ISHIMIZDIR.</h2>
+    <section class="reveal-on-scroll" id="capabilities" style="display: flex; flex-direction: column; gap: 40px; padding: 100px 0; z-index: 10; position: relative;">
+      <div class="about-grid-row" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: flex-start; width: 100%;">
+        <div class="about-left-col" style="text-align: left;">
+          <h2 class="section-h2" style="font-size: clamp(32px, 4.5vw, 64px); font-weight: 400; letter-spacing: -0.03em; text-transform: none; line-height: 1.05;">Our Passion<br>Become Our Work</h2>
         </div>
-        <div class="about-right-col">
-          <p class="about-desc" style="margin-bottom: 0;" data-cms="home.capabilitiesDesc">
-            Biz zamonaviy startaplar va rivojlanayotgan bizneslar uchun mahsulotlar yaratadigan boutique raqamli studiyamiz. Har bir element ma'lum bir tartib va funksiyaga ega.
+        <div class="about-right-col" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 30px; width: 100%;">
+          <p class="about-desc" style="font-size: 18px; color: var(--text-muted); line-height: 1.5; max-width: 480px; margin-bottom: 0; text-align: left;">
+            We strive to give our customers and their users the best possible experience.
+          </p>
+          <a href="services.html" class="btn-primary" style="background-color:#121212; border:1px solid rgba(255,255,255,0.15); color:#FFFFFF; border-radius:100px; padding:12px 24px; text-transform:none; font-size:13px; font-weight:500; display:inline-flex; align-items:center; gap:8px;">
+            Our Services <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Capabilities Cards (Matches Screenshot 3) -->
+      <div class="process-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+        <!-- Card 1 -->
+        <div class="process-card" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; height: 320px; text-align: left; position: relative;">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 60px;">
+            <span style="font-size: 14px; font-weight: 500; color: var(--text-muted); font-family: monospace;">01</span>
+            <span style="font-size: 20px; color: var(--text-muted);">↗</span>
+          </div>
+          <div>
+            <h3 style="font-size: 24px; font-weight: 500; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.02em; text-transform: none;">UX and Product Design</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">We provide UX and Product Design to enhance your digital presence, focusing on user needs.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="process-card" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; height: 320px; text-align: left; position: relative;">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 60px;">
+            <span style="font-size: 14px; font-weight: 500; color: var(--text-muted); font-family: monospace;">02</span>
+            <span style="font-size: 20px; color: var(--text-muted);">↗</span>
+          </div>
+          <div>
+            <h3 style="font-size: 24px; font-weight: 500; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.02em; text-transform: none;">Brand Identity</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">We create unique brand identities that resonate. Our design ensures your brand stands out.</p>
+          </div>
+        </div>
+        <!-- Card 3 (With Olive Spotlight Glow) -->
+        <div class="process-card" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; height: 320px; text-align: left; position: relative; overflow: hidden; transition: background 0.3s, border-color 0.3s;">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 60px;">
+            <span style="font-size: 14px; font-weight: 500; color: var(--text-muted); font-family: monospace;">03</span>
+            <span style="font-size: 20px; color: var(--text-muted);">↗</span>
+          </div>
+          <div>
+            <h3 style="font-size: 24px; font-weight: 500; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.02em; text-transform: none;">Framer Development</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">We specialize in Framer for interactive sites. We ensure smooth user experiences.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infinite Scrolling Tag Marquee (Matches Screenshot 3) -->
+      <div class="marquee-container" style="display: flex; flex-direction: column; gap: 16px; background: transparent; border: none; padding: 40px 0 0 0;">
+        <!-- Marquee Row 1 (Forward) -->
+        <div class="marquee-track">
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Growth</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Experience</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Branding</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Strategy</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Research</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Communication</div>
+          <!-- Repeat for smooth loop -->
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Growth</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Experience</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Branding</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Strategy</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Research</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Communication</div>
+        </div>
+
+        <!-- Marquee Row 2 (Reverse) -->
+        <div class="marquee-track reverse">
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> SaaS</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> AI</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> LLM</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Digital</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Transformation</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Business</div>
+          <!-- Repeat for smooth loop -->
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> SaaS</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> AI</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> LLM</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Digital</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Transformation</div>
+          <div class="marquee-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Business</div>
+        </div>
+      </div>
+
+    <!-- Portfolio Project Summary (Monochromatic Table List - Screenshot 4 & 5) -->
+    <section class="reveal-on-scroll" id="recent-works" style="padding: 100px 0; z-index: 10; position: relative;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; text-align: left;">
+        <div>
+          <h2 class="section-h2" style="font-size: clamp(32px, 4.5vw, 64px); font-weight: 400; letter-spacing: -0.03em; text-transform: none; margin-bottom: 16px;">Our Recent Projects</h2>
+          <p class="about-desc" style="font-size: 16px; color: var(--text-muted); line-height: 1.5; max-width: 500px; margin-bottom: 0;">
+            We drive growth for your business by making your brand more compelling online.
           </p>
         </div>
+        <a href="work.html" class="btn-primary" style="background-color:#121212; border:1px solid rgba(255,255,255,0.15); color:#FFFFFF; border-radius:100px; padding:12px 24px; text-transform:none; font-size:13px; font-weight:500; display:inline-flex; align-items:center; gap:8px;">
+          Explore More <span>↗</span>
+        </a>
       </div>
 
-      <div class="process-grid">
-        <div class="process-card">
-          <span class="process-num" data-cms="home.capabilities.0.num">[ 01 ]</span>
-          <h3 class="process-title" data-cms="home.capabilities.0.title">UI/UX & Product</h3>
-          <p class="process-text" data-cms="home.capabilities.0.desc">Dinamik va yuqori konversiyali platformalar, murakkab boshqaruv panellari va minimalist veb-saytlar loyihalash.</p>
-        </div>
-        <div class="process-card">
-          <span class="process-num" data-cms="home.capabilities.1.num">[ 02 ]</span>
-          <h3 class="process-title" data-cms="home.capabilities.1.title">Brand Identity</h3>
-          <p class="process-text" data-cms="home.capabilities.1.desc">Kompaniyangiz uchun qat'iy vizual qoidalar, geometrik logotiplar va to'laqonli minimalist brend tizimi.</p>
-        </div>
-        <div class="process-card">
-          <span class="process-num" data-cms="home.capabilities.2.num">[ 03 ]</span>
-          <h3 class="process-title" data-cms="home.capabilities.2.title">Framer Development</h3>
-          <p class="process-text" data-cms="home.capabilities.2.desc">Figma chizmalarini bevosita yuqori tezlikda yuklanuvchi, interaktiv va animatsiyali Framer saytiga o'tkazish.</p>
-        </div>
+      <div class="projects-list-table">
+        <!-- Row 1 -->
+        <a href="work/aurora/" class="project-row" data-preview="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" aria-label="Aurora Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(01)</span>
+            <span class="project-row-title">Aurora</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2025</span>
+            <span class="project-row-category">Research & Design</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
+        <!-- Row 2 -->
+        <a href="work/bitflex/" class="project-row" data-preview="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=600&q=80" aria-label="Bitflex Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(02)</span>
+            <span class="project-row-title">Bitflex</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2025</span>
+            <span class="project-row-category">Framer Development</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
+        <!-- Row 3 -->
+        <a href="work/digital-products-services/" class="project-row" data-preview="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" aria-label="Rubric Inc. Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(03)</span>
+            <span class="project-row-title">Rubric Inc.</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2024</span>
+            <span class="project-row-category">Website Design</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
+        <!-- Row 4 -->
+        <a href="work/elitque-corporate-sass-website/" class="project-row" data-preview="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" aria-label="Elitque Corporate Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(04)</span>
+            <span class="project-row-title">Elitque Corporate</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2022</span>
+            <span class="project-row-category">Research & Design</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
+        <!-- Row 5 -->
+        <a href="work/lionderapp/" class="project-row" data-preview="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" aria-label="Lionder Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(05)</span>
+            <span class="project-row-title">Lionder</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2022</span>
+            <span class="project-row-category">Digital Services</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
+        <!-- Row 6 -->
+        <a href="work/design-weekend-in-kostroma/" class="project-row" data-preview="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80" aria-label="Kostroma Project">
+          <div class="project-row-left">
+            <span class="project-row-num">(06)</span>
+            <span class="project-row-title">Kostroma</span>
+          </div>
+          <div class="project-row-meta">
+            <span class="project-row-year">2021</span>
+            <span class="project-row-category">Website Design</span>
+            <span class="project-row-arrow">↗</span>
+          </div>
+        </a>
       </div>
-    </section>
 
-    <!-- Portfolio Project Summary (4 works) -->
-    <section class="reveal-on-scroll" id="recent-works">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
-        <div>
-          <span class="section-tag">03 // LOYIHALARIMIZ</span>
-          <h2 class="section-h2" style="margin-bottom: 0;">SONGI IJODIY ISHLAR</h2>
-        </div>
-        <a href="work.html" class="btn-secondary">Barcha Loyihalar</a>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <a href="work/bitflex/" class="project-card" aria-label="Bitflex case study">
-          <div class="project-image-box">
-            <div class="project-mesh" aria-hidden="true"></div>
-            <div class="project-logo-badge">BITFLEX</div>
-          </div>
-          <div class="project-info-block">
-            <div>
-              <h3 class="project-title">Bitflex Crypto Platform</h3>
-              <span class="project-tag">UI/UX & Fintech Web // 2026</span>
-            </div>
-            <div class="project-arrow" aria-hidden="true">→</div>
-          </div>
-        </a>
-        <!-- Project 2 -->
-        <a href="work/lionderapp/" class="project-card" aria-label="Lionderapp case study">
-          <div class="project-image-box">
-            <div class="project-mesh" aria-hidden="true"></div>
-            <div class="project-logo-badge">LIONDER</div>
-          </div>
-          <div class="project-info-block">
-            <div>
-              <h3 class="project-title">Lionder Social Experience App</h3>
-              <span class="project-tag">UX/UI & Research // 2026</span>
-            </div>
-            <div class="project-arrow" aria-hidden="true">→</div>
-          </div>
-        </a>
-        <!-- Project 3 -->
-        <a href="work/aurora/" class="project-card" aria-label="Aurora case study">
-          <div class="project-image-box">
-            <div class="project-mesh" aria-hidden="true"></div>
-            <div class="project-logo-badge">AURORA</div>
-          </div>
-          <div class="project-info-block">
-            <div>
-              <h3 class="project-title">Aurora AI Intelligence Dashboard</h3>
-              <span class="project-tag">Branding & AI Spatial // 2026</span>
-            </div>
-            <div class="project-arrow" aria-hidden="true">→</div>
-          </div>
-        </a>
-        <!-- Project 4 -->
-        <a href="work/elitque-corporate-sass-website/" class="project-card" aria-label="Elitque case study">
-          <div class="project-image-box">
-            <div class="project-mesh" aria-hidden="true"></div>
-            <div class="project-logo-badge">ELITQUE</div>
-          </div>
-          <div class="project-info-block">
-            <div>
-              <h3 class="project-title">Elitque Corporate SaaS Web</h3>
-              <span class="project-tag">SaaS Design & Development // 2025</span>
-            </div>
-            <div class="project-arrow" aria-hidden="true">→</div>
-          </div>
-        </a>
+      <!-- Floating Preview Box Element (Screenshots 5) -->
+      <div class="project-floating-preview" id="floating-preview">
+        <img class="project-floating-img" id="floating-img" src="" alt="Preview">
       </div>
     </section>
 
