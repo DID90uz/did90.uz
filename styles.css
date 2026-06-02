@@ -1867,173 +1867,42 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: -0.02em !important;
 }
 
-/* Hero Slider Showcase Styles */
-.hero-slider-container {
+/* Top Fold Ambient Dunelike Landscape Background Banner */
+.top-fold-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  aspect-ratio: 16/9;
-  border-radius: 24px;
+  background: 
+    linear-gradient(to bottom, rgba(7, 7, 7, 0) 0%, rgba(7, 7, 7, 0.3) 60%, rgba(7, 7, 7, 0.95) 90%, #070707 100%),
+    url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   overflow: hidden;
-  margin-top: 60px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
-  z-index: 10;
 }
 
-.hero-slider-track {
-  position: relative;
+header {
   width: 100%;
-  height: 100%;
-}
-
-.hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  scale: 1.05;
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-              scale 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
-}
-
-.hero-slide.active {
-  opacity: 1;
-  scale: 1;
-  pointer-events: auto;
-  z-index: 2;
-}
-
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-  transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-slide.active img {
-  transform: scale(1.08); /* Apple Ken Burns zoom effect */
-}
-
-.slide-caption {
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
-  color: #FFFFFF;
-  font-size: clamp(13px, 1.5vw, 18px);
-  font-weight: 400;
-  z-index: 5;
-  letter-spacing: -0.01em;
-  background: rgba(7, 7, 7, 0.5);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 10px 24px;
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Slider Easing Navigation Arrows */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(7, 7, 7, 0.5);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-color);
-  color: #FFFFFF;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 18px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background var(--transition-speed) ease, 
-              border-color var(--transition-speed) ease, 
-              color var(--transition-speed) ease, 
-              opacity 0.3s ease,
-              transform 0.2s ease;
-  z-index: 10;
-  opacity: 0;
-  pointer-events: none;
+  padding: 24px 6%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  position: sticky;
+  top: 0;
+  background-color: transparent !important;
+  backdrop-filter: blur(0px) !important;
+  -webkit-backdrop-filter: blur(0px) !important;
+  z-index: 1000;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.hero-slider-container:hover .slider-arrow {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.slider-arrow.prev {
-  left: 30px;
-}
-.slider-arrow.next {
-  right: 30px;
-}
-
-.slider-arrow:hover {
-  background: var(--text-color);
-  color: var(--bg-color);
-  border-color: var(--text-color);
-  transform: translateY(-50%) scale(1.05);
-}
-
-/* Dot Indicators */
-.slider-dots {
-  position: absolute;
-  bottom: 35px;
-  right: 40px;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.slider-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: background var(--transition-speed) ease, 
-              width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.slider-dot.active {
-  background: #FFFFFF;
-  width: 24px;
-  border-radius: 100px;
-}
-
-@media (max-width: 809.98px) {
-  .hero-slider-container {
-    aspect-ratio: 4/3;
-    border-radius: 16px;
-    margin-top: 40px;
-  }
-  .slide-caption {
-    bottom: 20px;
-    left: 20px;
-    padding: 8px 16px;
-  }
-  .slider-dots {
-    bottom: 25px;
-    right: 20px;
-  }
-  .slider-arrow {
-    width: 40px;
-    height: 40px;
-  }
-  .slider-arrow.prev {
-    left: 15px;
-  }
-  .slider-arrow.next {
-    right: 15px;
-  }
+header.scrolled {
+  background-color: rgba(7, 7, 7, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 

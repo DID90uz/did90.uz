@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initProjectPreviews();
   initAllLowercaseCasing();
-  initHeroSlider();
+  initHeaderScroll();
 });
 
 /**
@@ -351,75 +351,21 @@ function initAllLowercaseCasing() {
 window.initAllLowercaseCasing = initAllLowercaseCasing;
 
 /**
- * 9. Premium Easing-based Hero Slider Carousel
+ * 9. Scroll-Responsive Glassmorphic Sticky Header Easing
  */
-function initHeroSlider() {
-  const slider = document.querySelector('.hero-slider-container');
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.slider-dot');
-  const prevBtn = document.getElementById('slider-prev');
-  const nextBtn = document.getElementById('slider-next');
+function initHeaderScroll() {
+  const header = document.querySelector('header');
+  if (!header) return;
 
-  if (!slider || slides.length === 0) return;
-
-  let currentIndex = 0;
-  let slideInterval;
-
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-
-    currentIndex = (index + slides.length) % slides.length;
-
-    slides[currentIndex].classList.add('active');
-    dots[currentIndex].classList.add('active');
+  function toggleHeaderClass() {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   }
 
-  function nextSlide() {
-    showSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentIndex - 1);
-  }
-
-  function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 6000); // 6 seconds per slide
-  }
-
-  function stopAutoSlide() {
-    clearInterval(slideInterval);
-  }
-
-  // Event listeners
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      stopAutoSlide();
-      startAutoSlide();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      stopAutoSlide();
-      startAutoSlide();
-    });
-  }
-
-  dots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => {
-      showSlide(idx);
-      stopAutoSlide();
-      startAutoSlide();
-    });
-  });
-
-  // Pause auto-sliding on hover
-  slider.addEventListener('mouseenter', stopAutoSlide);
-  slider.addEventListener('mouseleave', startAutoSlide);
-
-  startAutoSlide();
+  window.addEventListener('scroll', toggleHeaderClass);
+  toggleHeaderClass(); // Initial check in case page is refreshed while scrolled
 }
 

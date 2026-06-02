@@ -28,8 +28,10 @@
   <!-- Custom Cursor Bracket Frame -->
   <div class="custom-cursor" id="app-cursor" aria-hidden="true"></div>
 
-  <!-- Sticky Glassmorphic Header Menu -->
-  <header>
+  <!-- Top Fold Banner (Header + Hero) -->
+  <div class="top-fold-container">
+    <!-- Sticky Glassmorphic Header Menu -->
+    <header>
     <a href="index.html" class="logo-wrapper" aria-label="DID90° Agency Home">
       <svg class="logo-svg" width="1606" height="400" viewBox="0 0 1606 400" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1515.06 184.655C1464.86 184.655 1424.29 144.083 1424.29 94.1481C1424.29 44.2131 1464.86 3.38086 1515.06 3.38086C1564.99 3.38086 1605.31 44.2131 1605.31 94.1481C1605.31 144.083 1564.99 184.655 1515.06 184.655ZM1515.06 137.321C1538.73 137.321 1557.97 118.075 1557.97 94.1481C1557.97 70.2209 1538.73 50.9751 1515.06 50.9751C1491.13 50.9751 1471.63 70.2209 1471.63 94.1481C1471.63 118.075 1491.13 137.321 1515.06 137.321Z" fill="currentColor"/>
@@ -87,40 +89,12 @@
             <div style="font-size: 13px; font-weight: 700; color: #FFFFFF;">59+ Reviews on <span style="color:#00D419;">★</span> <a href="https://trustpilot.com" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Trustpilot</a></div>
             <div style="font-size: 11px; color: var(--text-muted);">Used by 70+ SaaS Startups</div>
           </div>
-        </div>
-      </div>
-
-      <!-- Premium Showcase Slider (Apple/AuraZen Easing Styles) -->
-      <div class="hero-slider-container">
-        <div class="hero-slider-track" id="hero-slider-track">
-          <!-- Slide 1 -->
-          <div class="hero-slide active">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="Spatial UI/UX Showcase">
-            <div class="slide-caption">Spatial UI/UX Showcase</div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1618005198143-e5283b519a7f?auto=format&fit=crop&w=1200&q=80" alt="Digital Identity & Branding">
-            <div class="slide-caption">Digital Identity & Branding</div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80" alt="Framer Web Engineering">
-            <div class="slide-caption">Framer Web Engineering</div>
-          </div>
-        </div>
-        <!-- Navigation Arrows -->
-        <button class="slider-arrow prev" id="slider-prev" aria-label="Previous Slide">←</button>
-        <button class="slider-arrow next" id="slider-next" aria-label="Next Slide">→</button>
-        <!-- Dots Indicators -->
-        <div class="slider-dots" id="slider-dots">
-          <span class="slider-dot active" data-index="0"></span>
-          <span class="slider-dot" data-index="1"></span>
-          <span class="slider-dot" data-index="2"></span>
-        </div>
       </div>
     </main>
+    </div> <!-- Close content-wrapper inside top-fold -->
+  </div> <!-- Close top-fold-container -->
 
+  <div class="content-wrapper">
     <!-- About Summary Grid Row -->
     <section class="about-grid-row reveal-on-scroll" id="about-summary" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; padding: 100px 0; z-index: 10; position: relative;">
       <div class="about-left-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; height: 100%;">
