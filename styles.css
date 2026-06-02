@@ -19,6 +19,7 @@
   --font-family: 'Inter', sans-serif;
   --transition-speed: 0.3s;
   --cursor-size: 20px;
+  --header-bg: rgba(0, 0, 0, 0.75);
 }
 
 html[data-theme="light"] {
@@ -31,6 +32,7 @@ html[data-theme="light"] {
   --accent-color: #ebff00;
   --border-color: #e5e5e5;
   --border-light: #dcdcdc;
+  --header-bg: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -133,7 +135,7 @@ header {
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: var(--header-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 1000;
@@ -1623,4 +1625,15 @@ html[data-theme="light"] .tab-btn.active {
   border-bottom-color: #000000;
   color: #000000;
 }
+
+/* Theme Toggle Button Premium Hover Feedback */
+.theme-toggle-btn:hover {
+  background-color: var(--border-light) !important;
+  border-color: var(--border-light) !important;
+}
+html[data-theme="light"] .theme-toggle-btn:hover {
+  background-color: #f0f0f0 !important;
+  border-color: #e5e5e5 !important;
+}
+
 
