@@ -1857,5 +1857,15 @@ html[data-theme="light"] .theme-toggle-btn:hover {
   }
 }
 
+/* Typography Override: Enforce Premium Light-Regular (400) Headings & Remove Uppercase Casing */
+h1, h2, h3, h4, h5, h6,
+.hero-h1, .section-h2, .process-title, .project-title, .pricing-card-title, 
+.price-amount, .price-tier-name, .faq-trigger, .footer-cta-title, .blog-title, 
+.footer-col-h6, .project-row-title, .stats-number, .stat-number, .process-num {
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: -0.02em !important;
+}
+
 
 

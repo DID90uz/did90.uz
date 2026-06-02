@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBriefBuilder();
   initScrollAnimations();
   initProjectPreviews();
+  initHeadingsStyle();
 });
 
 /**
@@ -316,6 +317,27 @@ function initProjectPreviews() {
     row.addEventListener('mouseleave', () => {
       floatingPreview.classList.remove('active');
     });
+  });
+}
+
+/**
+ * 8. Dynamic Title Case Casing & Typography Enforcer for All Headings
+ */
+function initHeadingsStyle() {
+  const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, .hero-h1, .section-h2, .process-title, .project-title, .pricing-card-title, .footer-cta-title, .blog-title, .footer-col-h6');
+  elements.forEach(el => {
+    // Traverse text nodes to preserve inner HTML structure (e.g., span highlights)
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+      const text = node.nodeValue.trim();
+      if (text && text === text.toUpperCase() && /[A-Za-z\u0400-\u04FF]/.test(text)) {
+        // Convert completely capitalized text nodes to sentence/title case beautifully
+        node.nodeValue = node.nodeValue.replace(/([a-zA-Z\u0400-\u04FF\u00C0-\u00FF'’]+)/g, (match) => {
+          return match.charAt(0).toUpperCase() + match.slice(1).toLowerCase();
+        });
+      }
+    }
   });
 }
 
