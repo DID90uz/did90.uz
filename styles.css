@@ -261,9 +261,10 @@ header {
 
 /* Master Grid Structure */
 .content-wrapper {
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1264px;
   margin: 0 auto;
-  padding: 0 6%;
+  padding: 0;
 }
 
 /* Section Standard Layouts */
@@ -302,13 +303,32 @@ section {
 }
 
 .hero-h1 {
-  font-size: clamp(38px, 6.2vw, 84px);
-  line-height: 1.02;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  max-width: 1100px;
+  font-family: "Inter Display", "Inter", sans-serif;
+  font-size: 72px;
+  line-height: 1.06;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  max-width: 1008px;
   margin-bottom: 32px;
+}
+@media (max-width: 1199.98px) {
+  .hero-h1 {
+    font-size: 60px;
+    letter-spacing: -0.04em;
+  }
+}
+@media (max-width: 809.98px) {
+  .hero-h1 {
+    font-size: 44px;
+    letter-spacing: -0.02em;
+  }
+}
+@media (max-width: 480px) {
+  .hero-h1 {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .hero-h1 span.highlight {
@@ -316,10 +336,12 @@ section {
 }
 
 .hero-subtitle {
-  font-size: clamp(16px, 1.8vw, 20px);
-  color: var(--text-muted);
-  line-height: 1.5;
-  max-width: 700px;
+  font-family: "Inter Display", sans-serif;
+  font-size: 17px;
+  color: #afafaf;
+  line-height: 1.44;
+  letter-spacing: -0.02em;
+  max-width: 768px;
   margin-bottom: 48px;
 }
 
@@ -443,18 +465,42 @@ section {
 }
 
 .section-h2 {
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.1;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
+  font-family: "Inter Display", "Inter", sans-serif;
+  font-size: 54px;
+  line-height: 1.04;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: none;
   margin-bottom: 30px;
+}
+@media (max-width: 1199.98px) {
+  .section-h2 {
+    font-size: 44px;
+    line-height: 1.08;
+    letter-spacing: -0.032em;
+  }
+}
+@media (max-width: 809.98px) {
+  .section-h2 {
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+}
+@media (max-width: 480px) {
+  .section-h2 {
+    font-size: 28px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
 }
 
 .about-desc {
+  font-family: "Inter Display", sans-serif;
   font-size: 16px;
-  color: var(--text-muted);
-  line-height: 1.6;
+  color: #6c6c6c;
+  line-height: 1.44;
+  letter-spacing: -0.02em;
   margin-bottom: 30px;
 }
 
@@ -470,7 +516,7 @@ section {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
   transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -495,10 +541,23 @@ section {
 }
 
 .process-title {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: "Inter Display", sans-serif;
+  font-size: 36px;
+  line-height: 1.00;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  text-transform: none;
   margin-bottom: 16px;
+}
+@media (max-width: 1199.98px) {
+  .process-title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .process-title {
+    font-size: 24px;
+  }
 }
 
 .process-text {
@@ -521,7 +580,7 @@ section {
   color: var(--text-color);
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
   transition: border-color var(--transition-speed) ease;
@@ -827,12 +886,34 @@ section {
 }
 
 .footer-cta-title {
-  font-size: clamp(32px, 5.5vw, 72px);
-  line-height: 1.05;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
+  font-family: "Inter Display", sans-serif;
+  font-size: 54px;
+  line-height: 1.04;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: none;
   margin-bottom: 24px;
+}
+@media (max-width: 1199.98px) {
+  .footer-cta-title {
+    font-size: 44px;
+    line-height: 1.08;
+    letter-spacing: -0.032em;
+  }
+}
+@media (max-width: 809.98px) {
+  .footer-cta-title {
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+}
+@media (max-width: 480px) {
+  .footer-cta-title {
+    font-size: 28px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
 }
 
 .footer-cta-title span.highlight {
@@ -840,11 +921,13 @@ section {
 }
 
 .footer-cta-desc {
+  font-family: "Inter Display", sans-serif;
   font-size: 16px;
-  color: var(--text-muted);
+  color: #6c6c6c;
   max-width: 600px;
   margin: 0 auto 40px auto;
-  line-height: 1.6;
+  line-height: 1.44;
+  letter-spacing: -0.02em;
 }
 
 /* Real Footer Links Layout */
