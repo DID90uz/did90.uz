@@ -320,6 +320,7 @@
         loginError.style.display = 'none';
         
         fetch(`https://api.github.com/repos/${OWNER}/${REPO}`, {
+          cache: 'no-store',
           headers: {
             'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github.v3+json'
@@ -333,11 +334,16 @@
             logoutBtn.style.display = 'block';
             loadPostsFromGitHub();
           } else {
-            throw new Error('Access denied');
+            return res.json().then(errData => {
+              throw new Error(errData.message || `Status ${res.status}`);
+            }).catch(() => {
+              throw new Error(`Status ${res.status}`);
+            });
           }
         })
         .catch(err => {
           console.error(err);
+          loginError.textContent = `Ulanishda xatolik: ${err.message}. Tokeningizni va repozitoriyaga kirish huquqini tekshiring.`;
           loginError.style.display = 'block';
           localStorage.removeItem('did90_github_token');
         });
@@ -346,14 +352,20 @@
       // Fetch live JSON from GitHub API
       function loadPostsFromGitHub() {
         fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+          cache: 'no-store',
           headers: {
             'Authorization': `token ${token}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'Cache-Control': 'no-cache'
+            'Accept': 'application/vnd.github.v3+json'
           }
         })
         .then(res => {
-          if (!res.ok) throw new Error('Failed to fetch posts.json');
+          if (!res.ok) {
+            return res.json().then(errData => {
+              throw new Error(errData.message || `Status ${res.status}`);
+            }).catch(() => {
+              throw new Error(`Status ${res.status}`);
+            });
+          }
           return res.json();
         })
         .then(data => {
@@ -365,7 +377,7 @@
         })
         .catch(err => {
           console.error(err);
-          alert('Maqolalarni yuklashda xatolik yuz berdi!');
+          alert('Maqolalarni yuklashda xatolik yuz berdi: ' + err.message);
         });
       }
 
@@ -495,7 +507,13 @@
           body: JSON.stringify(payload)
         })
         .then(res => {
-          if (!res.ok) throw new Error('Commit failed');
+          if (!res.ok) {
+            return res.json().then(errData => {
+              throw new Error(errData.message || `Status ${res.status}`);
+            }).catch(() => {
+              throw new Error(`Status ${res.status}`);
+            });
+          }
           return res.json();
         })
         .then(data => {
@@ -507,7 +525,7 @@
         })
         .catch(err => {
           console.error(err);
-          alert('GitHub-ga saqlashda xatolik yuz berdi. Iltimos, tokenni tekshiring.');
+          alert('GitHub-ga saqlashda xatolik yuz berdi: ' + err.message);
         });
       }
 
