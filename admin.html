@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="uz-UZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DID90° Studio — CMS Admin Panel</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Unique layout styles for the visual editor */
+    .admin-gate {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .admin-dashboard {
+      display: none; /* Shown dynamically upon verification */
+      grid-template-columns: repeat(12, 1fr);
+      gap: 40px;
+      padding: 40px 0;
+    }
+    
+    .admin-list-col {
+      grid-column: span 5;
+      border-right: 1px solid var(--border-color);
+      padding-right: 40px;
+    }
+    
+    .admin-form-col {
+      grid-column: span 7;
+    }
+    
+    .admin-post-item {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color var(--transition-speed) ease;
+    }
+    
+    .admin-post-item:hover, .admin-post-item.active {
+      border-color: var(--accent-color);
+    }
+    
+    .admin-post-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 250px;
+    }
+    
+    .admin-post-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .admin-post-edit-btn {
+      background: none;
+      border: 1px solid var(--border-light);
+      color: var(--text-color);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 100px;
+      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    }
+    
+    .admin-post-item:hover .admin-post-edit-btn, .admin-post-item.active .admin-post-edit-btn {
+      background-color: var(--accent-color);
+      color: #000000;
+      border-color: var(--accent-color);
+    }
+    
+    /* Notification Badge */
+    .notif-badge {
+      display: none;
+      background-color: var(--accent-color);
+      color: #000000;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      width: 100%;
+      text-align: center;
+      animation: flashGlow 1.5s infinite alternate;
+    }
+    
+    @keyframes flashGlow {
+      0% { box-shadow: 0 0 5px rgba(235, 255, 0, 0.2); }
+      100% { box-shadow: 0 0 20px rgba(235, 255, 0, 0.6); }
+    }
+    
+    .admin-action-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .btn-delete {
+      background-color: #ff3b30;
+      color: #ffffff;
+      border: 1px solid #ff3b30;
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 100px;
+      transition: opacity var(--transition-speed) ease;
+    }
+    
+    .btn-delete:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Cursor Bracket Frame -->
+  <div class="custom-cursor" id="app-cursor" aria-hidden="true"></div>
+
+  <!-- Sticky Glassmorphic Header Menu -->
+  <header>
+    <a href="index.html" class="logo-wrapper" aria-label="DID90° Agency Home">
+      <svg class="logo-svg" width="1606" height="400" viewBox="0 0 1606 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1515.06 184.655C1464.86 184.655 1424.29 144.083 1424.29 94.1481C1424.29 44.2131 1464.86 3.38086 1515.06 3.38086C1564.99 3.38086 1605.31 44.2131 1605.31 94.1481C1605.31 144.083 1564.99 184.655 1515.06 184.655ZM1515.06 137.321C1538.73 137.321 1557.97 118.075 1557.97 94.1481C1557.97 70.2209 1538.73 50.9751 1515.06 50.9751C1491.13 50.9751 1471.63 70.2209 1471.63 94.1481C1471.63 118.075 1491.13 137.321 1515.06 137.321Z" fill="currentColor"/>
+        <path d="M1251.32 400C1157.69 400 1100.21 323.017 1100.21 200.26C1100.21 77.2432 1157.69 0 1251.32 0C1344.95 0 1402.42 76.9831 1402.42 200.26C1402.42 323.017 1344.95 400 1251.32 400ZM1251.32 343.303C1304.89 343.303 1337.4 289.207 1337.4 200.26C1337.4 110.793 1304.89 56.697 1251.32 56.697C1198 56.697 1165.23 110.793 1165.23 200.26C1165.23 289.207 1198 343.303 1251.32 343.303Z" fill="currentColor"/>
+        <path d="M932.442 400C858.32 400 808.125 354.486 801.103 291.287H866.122C872.364 324.057 896.031 344.863 931.662 344.863C990.959 344.863 1019.31 291.547 1019.31 214.564H1018.79C1000.06 244.213 965.992 260.078 925.42 260.078C852.338 260.078 798.502 205.722 798.502 131.339C798.502 53.316 855.719 0 937.123 0C1030.23 0 1083.81 68.6606 1083.81 188.036C1083.81 316.515 1032.57 400 932.442 400ZM936.603 205.982C977.956 205.982 1010.47 173.472 1010.47 131.079C1010.47 88.4265 978.216 55.9168 937.643 55.9168C896.291 55.9168 864.041 88.4265 864.041 131.339C864.041 174.252 895.511 205.982 936.603 205.982Z" fill="currentColor"/>
+        <path d="M592.759 393.758H461.94V6.24194H595.62C710.835 6.24194 782.356 80.3642 782.356 199.48C782.356 319.376 711.355 393.758 592.759 393.758ZM530.601 334.981H589.118C673.383 334.981 712.915 285.566 712.915 199.48C712.915 114.174 672.863 65.0196 591.199 65.0196H530.601V334.981Z" fill="currentColor"/>
+        <path d="M418.746 6.24194V393.758H350.085V6.24194H418.746Z" fill="currentColor"/>
+        <path d="M130.819 393.758H0V6.24194H133.68C248.895 6.24194 320.416 80.3642 320.416 199.48C320.416 319.376 249.415 393.758 130.819 393.758ZM68.6606 334.981H127.178C211.443 334.981 250.975 285.566 250.975 199.48C250.975 114.174 210.923 65.0196 129.259 65.0196H68.6606V334.981Z" fill="currentColor"/>
+      </svg>
+    </a>
+    <span class="section-tag" style="margin-bottom: 0;">[ DID90° CMS muharriri ]</span>
+    <button class="btn-secondary" id="logout-btn" style="display:none; padding: 8px 20px; font-size: 11px;">Chiqish</button>
+  </header>
+
+  <div class="content-wrapper">
+
+    <!-- 1. Secure Access login Gate -->
+    <main class="admin-gate" id="login-gate">
+      <span class="section-tag">[ TIZIMGA KIRISH ]</span>
+      <h2 class="section-h2" style="text-align: center; font-size: clamp(20px, 3vw, 32px);">GITHUB TOKENGIZNI KIRITING</h2>
+      <p class="about-desc" style="text-align: center; font-size: 13px;">
+        Saytdagi maqolalarni vizual tahrirlash uchun GitHub Personal Access Tokeningizni kiriting. Token faqat sizning brauzeringiz xotirasida xavfsiz saqlanadi.
+      </p>
+      
+      <div class="form-group" style="width: 100%;">
+        <label class="form-label" for="github-token">GitHub Token (PAT)</label>
+        <input type="password" id="github-token" class="form-input" placeholder="ghp_..." style="text-align: center;">
+      </div>
+      
+      <button class="btn-primary" id="login-btn" style="width: 100%; justify-content: center; margin-top: 10px;">ULANISH (CONNECT)</button>
+      <div id="login-error" style="color: #ff3b30; font-size: 12px; font-weight: 700; text-align: center; margin-top: 15px; display: none;">
+        Token xato yoki repozitoriyaga kirish huquqi yo'q!
+      </div>
+    </main>
+
+    <!-- 2. Main CMS Dashboard -->
+    <div class="admin-dashboard" id="admin-dashboard-container">
+      
+      <!-- Notification alert banner -->
+      <div style="grid-column: span 12;">
+        <div class="notif-badge" id="notif-box">O'ZGARISHLAR SAQLANDI! VERCEL REDEPLOY TRIGGERED [✓]</div>
+      </div>
+
+      <!-- Left Column: Blog list manager -->
+      <aside class="admin-list-col">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+          <div>
+            <span class="section-tag">MAQOLALAR RO'YXATI</span>
+            <h2 class="section-h2" style="font-size: 24px; margin-bottom: 0;">MAQOLALAR</h2>
+          </div>
+          <button class="btn-primary" id="new-post-btn" style="padding: 10px 20px; font-size: 11px;">+ YANGI</button>
+        </div>
+        
+        <div id="admin-posts-list-target">
+          <!-- Dynamic post item list will load here -->
+        </div>
+      </aside>
+
+      <!-- Right Column: Visual Form Editor -->
+      <main class="admin-form-col">
+        <span class="section-tag" id="form-action-tag">YANGI MAQOLA QO'SHISH</span>
+        <h2 class="section-h2" id="form-title-h2" style="font-size: 24px;">MAQOLA MA'LUMOTLARI</h2>
+
+        <form id="cms-editor-form" onsubmit="return false;">
+          <input type="hidden" id="edit-post-id">
+          
+          <div class="form-group">
+            <label class="form-label" for="edit-title">Maqola Sarlavhasi</label>
+            <input type="text" id="edit-title" class="form-input" placeholder="Maqola sarlavhasini yozing..." required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label class="form-label" for="edit-topic">Rukn / Kategoriya</label>
+              <select id="edit-topic" class="form-input" required>
+                <option value="UX DESIGN">UX DESIGN</option>
+                <option value="CONTENT STRATEGY">CONTENT STRATEGY</option>
+                <option value="VISUAL DESIGN">VISUAL DESIGN</option>
+                <option value="BRANDING">BRANDING</option>
+                <option value="3D DESIGN">3D DESIGN</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-author">Muallif</label>
+              <input type="text" id="edit-author" class="form-input" placeholder="Muallif ismi..." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-date">Chop etilgan sana</label>
+            <input type="date" id="edit-date" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-teaser">Qisqacha Tavsif (Teaser)</label>
+            <input type="text" id="edit-teaser" class="form-input" placeholder="Blog ro'yxatida ko'rinuvchi qisqa matn..." required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-body">Maqola to'liq matni (Markdown / HTML qo'llab-quvvatlaydi)</label>
+            <textarea id="edit-body" class="form-input" style="min-height: 250px;" placeholder="Maqola to'liq matnini shu yerga yozing..." required></textarea>
+          </div>
+
+          <div class="admin-action-row">
+            <button type="submit" class="btn-primary" id="save-post-btn" style="flex-grow: 1; justify-content: center;">SAQLASH (COMMIT TO GITHUB)</button>
+            <button type="button" class="btn-delete" id="delete-post-btn" style="display: none;">O'CHIRISH</button>
+          </div>
+        </form>
+      </main>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Configuration variables
+      const OWNER = 'DID90uz';
+      const REPO = 'did90.uz';
+      const FILE_PATH = 'blog/posts.json';
+      
+      const loginGate = document.getElementById('login-gate');
+      const dashboard = document.getElementById('admin-dashboard-container');
+      const tokenInput = document.getElementById('github-token');
+      const loginBtn = document.getElementById('login-btn');
+      const loginError = document.getElementById('login-error');
+      const logoutBtn = document.getElementById('logout-btn');
+      
+      const postsListTarget = document.getElementById('admin-posts-list-target');
+      const newPostBtn = document.getElementById('new-post-btn');
+      const editorForm = document.getElementById('cms-editor-form');
+      const notifBox = document.getElementById('notif-box');
+      
+      const formActionTag = document.getElementById('form-action-tag');
+      const formTitleH2 = document.getElementById('form-title-h2');
+      const deletePostBtn = document.getElementById('delete-post-btn');
+      
+      let token = localStorage.getItem('did90_github_token') || '';
+      let posts = [];
+      let fileSha = ''; // Required by GitHub API for updating file contents
+
+      // Check if token exists
+      if (token) {
+        tokenInput.value = token;
+        verifyTokenAndLoad();
+      }
+
+      // Login trigger
+      loginBtn.addEventListener('click', () => {
+        token = tokenInput.value.trim();
+        if (!token) return;
+        verifyTokenAndLoad();
+      });
+
+      // Logout trigger
+      logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('did90_github_token');
+        token = '';
+        loginGate.style.display = 'flex';
+        dashboard.style.display = 'none';
+        logoutBtn.style.display = 'none';
+      });
+
+      // Verify token
+      function verifyTokenAndLoad() {
+        loginError.style.display = 'none';
+        
+        fetch(`https://api.github.com/repos/${OWNER}/${REPO}`, {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        })
+        .then(res => {
+          if (res.ok) {
+            localStorage.setItem('did90_github_token', token);
+            loginGate.style.display = 'none';
+            dashboard.style.display = 'grid';
+            logoutBtn.style.display = 'block';
+            loadPostsFromGitHub();
+          } else {
+            throw new Error('Access denied');
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          loginError.style.display = 'block';
+          localStorage.removeItem('did90_github_token');
+        });
+      }
+
+      // Fetch live JSON from GitHub API
+      function loadPostsFromGitHub() {
+        fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Cache-Control': 'no-cache'
+          }
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to fetch posts.json');
+          return res.json();
+        })
+        .then(data => {
+          fileSha = data.sha;
+          // Decode Base64 content
+          const decodedContent = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
+          posts = JSON.parse(decodedContent);
+          renderDashboardList();
+        })
+        .catch(err => {
+          console.error(err);
+          alert('Maqolalarni yuklashda xatolik yuz berdi!');
+        });
+      }
+
+      // Render items on dashboard list
+      function renderDashboardList() {
+        postsListTarget.innerHTML = '';
+        
+        if (posts.length === 0) {
+          postsListTarget.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px 0;">Hozircha maqolalar yo\'q.</p>';
+          return;
+        }
+
+        posts.forEach(post => {
+          const item = document.createElement('div');
+          item.className = 'admin-post-item';
+          item.dataset.id = post.id;
+          item.innerHTML = `
+            <div>
+              <h4 class="admin-post-title">${post.title}</h4>
+              <span class="admin-post-meta">${post.topic} // ${post.date}</span>
+            </div>
+            <button class="admin-post-edit-btn">TAHRIRLASH</button>
+          `;
+
+          // Edit trigger on click
+          item.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('.admin-post-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            populateFormForEdit(post);
+          });
+
+          postsListTarget.appendChild(item);
+        });
+      }
+
+      // Populate Form Fields for Edit
+      function populateFormForEdit(post) {
+        document.getElementById('edit-post-id').value = post.id;
+        document.getElementById('edit-title').value = post.title;
+        document.getElementById('edit-topic').value = post.topic;
+        document.getElementById('edit-author').value = post.author;
+        document.getElementById('edit-date').value = post.date;
+        document.getElementById('edit-teaser').value = post.teaser;
+        document.getElementById('edit-body').value = post.body;
+
+        formActionTag.textContent = 'MAQOLANI TAHRIRLASH';
+        formTitleH2.textContent = post.title;
+        deletePostBtn.style.display = 'block';
+      }
+
+      // Clear Form Fields for New Post
+      function resetFormToNew() {
+        document.getElementById('edit-post-id').value = '';
+        editorForm.reset();
+        
+        // Auto fill date
+        document.getElementById('edit-date').value = new Date().toISOString().split('T')[0];
+
+        formActionTag.textContent = 'YANGI MAQOLA QO\'SHISH';
+        formTitleH2.textContent = 'MAQOLA MA\'LUMOTLARI';
+        deletePostBtn.style.display = 'none';
+        
+        document.querySelectorAll('.admin-post-item').forEach(i => i.classList.remove('active'));
+      }
+
+      newPostBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        resetFormToNew();
+      });
+
+      // Submit Save (Add or Update)
+      editorForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const id = document.getElementById('edit-post-id').value;
+        const title = document.getElementById('edit-title').value;
+        const topic = document.getElementById('edit-topic').value;
+        const author = document.getElementById('edit-author').value;
+        const date = document.getElementById('edit-date').value;
+        const teaser = document.getElementById('edit-teaser').value;
+        const body = document.getElementById('edit-body').value;
+
+        if (id) {
+          // Update existing
+          posts = posts.map(p => p.id === id ? { id, title, topic, author, date, teaser, body } : p);
+        } else {
+          // Add new
+          const newId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + Math.floor(Math.random()*1000);
+          posts.push({ id: newId, title, topic, author, date, teaser, body });
+        }
+
+        saveJSONToGitHub('Maqola saqlandi (CMS)');
+      });
+
+      // Delete Article trigger
+      deletePostBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('edit-post-id').value;
+        if (!id) return;
+
+        if (confirm('Ushbu maqolani butunlay o\'chirishni xohlaysizmi?')) {
+          posts = posts.filter(p => p.id !== id);
+          saveJSONToGitHub('Maqola o\'chirildi (CMS)');
+        }
+      });
+
+      // Make secure PUT request to GitHub API
+      function saveJSONToGitHub(commitMessage) {
+        const jsonString = JSON.stringify(posts, null, 2);
+        // Safely encode to UTF-8 Base64
+        const base64Content = btoa(unescape(encodeURIComponent(jsonString)));
+
+        const payload = {
+          message: commitMessage,
+          content: base64Content,
+          sha: fileSha
+        };
+
+        fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Commit failed');
+          return res.json();
+        })
+        .then(data => {
+          // Update SHA for next commits
+          fileSha = data.content.sha;
+          showNotification();
+          resetFormToNew();
+          loadPostsFromGitHub(); // Reload latest
+        })
+        .catch(err => {
+          console.error(err);
+          alert('GitHub-ga saqlashda xatolik yuz berdi. Iltimos, tokenni tekshiring.');
+        });
+      }
+
+      function showNotification() {
+        notifBox.style.display = 'block';
+        setTimeout(() => {
+          notifBox.style.display = 'none';
+        }, 5000);
+      }
+      
+      // Load default date for new posts
+      document.getElementById('edit-date').value = new Date().toISOString().split('T')[0];
+    });
+  </script>
+</body>
+</html>

@@ -51,77 +51,86 @@
       </p>
     </main>
 
-    <!-- Blog Grid List (3 items) -->
+    <!-- Blog Grid List (Dynamic & Filterable) -->
     <section id="blog-posts-list">
-      <div class="blog-grid" style="margin-top: 0;">
-        
-        <!-- Post 1 -->
-        <a href="contact.html" class="blog-card" aria-label="Read article about Design that Converts">
-          <div class="blog-header-placeholder">
-            <div class="blog-mesh"></div>
-            <span class="blog-topic-tag">UX DESIGN</span>
-          </div>
-          <div class="blog-body">
-            <div>
-              <div class="blog-meta-row">
-                <span>By Seraphim</span>
-                <span>•</span>
-                <span>Nov 27, 2025</span>
-              </div>
-              <h3 class="blog-title-h4">Dizayn qanday konversiya beradi: Bizning yondashuv</h3>
-              <p class="blog-teaser">
-                Veb-saytingiz sizning brendingiz haqida mijozda birinchi taassurot qoldiradi. Yaxshi dizayn shunchaki chiroyli ko'rinish emas; u ishonch va sotuvlarni oshiradi.
-              </p>
-            </div>
-            <span class="blog-read-more">Maqolani o'qish →</span>
-          </div>
-        </a>
-
-        <!-- Post 2 -->
-        <a href="contact.html" class="blog-card" aria-label="Read article about Content Strategy">
-          <div class="blog-header-placeholder">
-            <div class="blog-mesh"></div>
-            <span class="blog-topic-tag">CONTENT STRATEGY</span>
-          </div>
-          <div class="blog-body">
-            <div>
-              <div class="blog-meta-row">
-                <span>By Seraphim</span>
-                <span>•</span>
-                <span>Nov 16, 2025</span>
-              </div>
-              <h3 class="blog-title-h4">Digital olamni zabt etish: Zamonaviy strategiya</h3>
-              <p class="blog-teaser">
-                Kuchli kontent strategiyasi sizning qidiruv tizimlaridagi ko'rinuvchanligingizni belgilaydi. 2026-yilda B2B kompaniyalar uchun 7 ta asosiy ustun.
-              </p>
-            </div>
-            <span class="blog-read-more">Maqolani o'qish →</span>
-          </div>
-        </a>
-
-        <!-- Post 3 -->
-        <a href="contact.html" class="blog-card" aria-label="Read article about Product Launch Copy">
-          <div class="blog-header-placeholder">
-            <div class="blog-mesh"></div>
-            <span class="blog-topic-tag">VISUAL DESIGN</span>
-          </div>
-          <div class="blog-body">
-            <div>
-              <div class="blog-meta-row">
-                <span>By Rodrigo</span>
-                <span>•</span>
-                <span>Nov 16, 2025</span>
-              </div>
-              <h3 class="blog-title-h4">Raqamli mahsulot kopisini ishga tushirish</h3>
-              <p class="blog-teaser">
-                Biznesingiz muvaffaqiyati uchun axborot arxitekturasini to'g'ri qurish va navigatsiyani foydalanuvchiga sodda qilib taqdim etish qoidalari.
-              </p>
-            </div>
-            <span class="blog-read-more">Maqolani o'qish →</span>
-          </div>
-        </a>
-
+      <!-- Category Filter Pills -->
+      <div class="brief-options-box" style="margin-bottom: 50px; justify-content: center;" id="blog-filters-container">
+        <button class="brief-opt-btn active" data-filter="ALL">BARCHASI</button>
+        <button class="brief-opt-btn" data-filter="UX DESIGN">UX DESIGN</button>
+        <button class="brief-opt-btn" data-filter="CONTENT STRATEGY">CONTENT STRATEGY</button>
+        <button class="brief-opt-btn" data-filter="VISUAL DESIGN">VISUAL DESIGN</button>
       </div>
+
+      <div class="blog-grid" style="margin-top: 0;" id="blog-posts-grid">
+        <!-- Dynamic posts will be rendered here by JavaScript -->
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const grid = document.getElementById('blog-posts-grid');
+          const filtersContainer = document.getElementById('blog-filters-container');
+          let allPosts = [];
+
+          // Load posts from JSON
+          fetch('blog/posts.json')
+            .then(res => res.json())
+            .then(data => {
+              allPosts = data;
+              renderPosts('ALL');
+            })
+            .catch(err => {
+              console.error('Error loading posts:', err);
+              grid.innerHTML = '<p style="grid-column: span 3; text-align: center; color: var(--text-muted);">Maqolalarni yuklashda xatolik yuz berdi.</p>';
+            });
+
+          // Filter buttons action
+          if (filtersContainer) {
+            filtersContainer.querySelectorAll('[data-filter]').forEach(btn => {
+              btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                filtersContainer.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPosts(btn.dataset.filter);
+              });
+            });
+          }
+
+          function renderPosts(filter) {
+            grid.innerHTML = '';
+            const filtered = filter === 'ALL' ? allPosts : allPosts.filter(p => p.topic === filter);
+
+            if (filtered.length === 0) {
+              grid.innerHTML = '<p style="grid-column: span 3; text-align: center; color: var(--text-muted); padding: 40px 0;">Ushbu ruknda hozircha maqolalar mavjud emas.</p>';
+              return;
+            }
+
+            filtered.forEach(post => {
+              const card = document.createElement('a');
+              card.href = 'contact.html'; // Direct action to contract/brief
+              card.className = 'blog-card reveal-on-scroll active';
+              card.innerHTML = `
+                <div class="blog-header-placeholder">
+                  <div class="blog-mesh"></div>
+                  <span class="blog-topic-tag">${post.topic}</span>
+                </div>
+                <div class="blog-body">
+                  <div>
+                    <div class="blog-meta-row">
+                      <span>By ${post.author}</span>
+                      <span>•</span>
+                      <span>${post.date}</span>
+                    </div>
+                    <h3 class="blog-title-h4">${post.title}</h3>
+                    <p class="blog-teaser">${post.teaser}</p>
+                  </div>
+                  <span class="blog-read-more">Maqolani o'qish / Bog'lanish →</span>
+                </div>
+              `;
+              grid.appendChild(card);
+            });
+          }
+        });
+      </script>
     </section>
 
     <!-- Real Footer Links -->
