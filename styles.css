@@ -203,7 +203,7 @@ header {
 }
 
 /* Swiss Layout Sections */
-section {
+main, section {
   grid-column: span 12;
   border-bottom: 1px solid var(--border-color);
   padding: 80px 40px;
@@ -238,13 +238,14 @@ section {
 }
 
 .hero-title {
-  font-size: clamp(40px, 6.5vw, 96px);
+  font-size: clamp(32px, 5.2vw, 76px);
   line-height: 0.95;
   font-weight: 900;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   margin-bottom: 40px;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .hero-slogan {
