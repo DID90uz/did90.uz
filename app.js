@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBriefBuilder();
   initScrollAnimations();
   initProjectPreviews();
-  initHeadingsStyle();
+  initAllLowercaseCasing();
 });
 
 /**
@@ -321,23 +321,33 @@ function initProjectPreviews() {
 }
 
 /**
- * 8. Dynamic Title Case Casing & Typography Enforcer for All Headings
+ * 8. Dynamic Title Case Casing & Typography Enforcer for All Capitalized Elements
  */
-function initHeadingsStyle() {
-  const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, .hero-h1, .section-h2, .process-title, .project-title, .pricing-card-title, .footer-cta-title, .blog-title, .footer-col-h6');
-  elements.forEach(el => {
-    // Traverse text nodes to preserve inner HTML structure (e.g., span highlights)
-    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    while (node = walker.nextNode()) {
-      const text = node.nodeValue.trim();
-      if (text && text === text.toUpperCase() && /[A-Za-z\u0400-\u04FF]/.test(text)) {
-        // Convert completely capitalized text nodes to sentence/title case beautifully
-        node.nodeValue = node.nodeValue.replace(/([a-zA-Z\u0400-\u04FF\u00C0-\u00FF'’]+)/g, (match) => {
-          return match.charAt(0).toUpperCase() + match.slice(1).toLowerCase();
-        });
-      }
+function initAllLowercaseCasing() {
+  // Traverse all text nodes in the entire document body
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  let node;
+  while (node = walker.nextNode()) {
+    // Avoid scripts, styles, or hidden tags
+    const parentTagName = node.parentNode ? node.parentNode.tagName : '';
+    if (parentTagName === 'SCRIPT' || parentTagName === 'STYLE') continue;
+
+    const text = node.nodeValue.trim();
+    // Check if the text node is completely capitalized and contains letters
+    if (text && text === text.toUpperCase() && /[A-Za-z\u0400-\u04FF]/.test(text)) {
+      // Convert completely capitalized text nodes to sentence/title case beautifully
+      node.nodeValue = node.nodeValue.replace(/([a-zA-Z\u0400-\u04FF\u00C0-\u00FF'’]+)/g, (match) => {
+        // Preserving premium industry standard abbreviations in all caps
+        const upper = match.toUpperCase();
+        if (["UI", "UX", "MVP", "B2B", "B2C", "AI", "FAQ", "SaaS", "SASS", "DID90", "LOC"].includes(upper)) {
+          return upper === "SASS" ? "SaaS" : upper;
+        }
+        return match.charAt(0).toUpperCase() + match.slice(1).toLowerCase();
+      });
     }
-  });
+  }
 }
+
+// Bind globally so other scripts like cms-core.js can invoke it after AJAX hydration
+window.initAllLowercaseCasing = initAllLowercaseCasing;
 

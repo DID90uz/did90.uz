@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       hydrateDOM(data);
+      if (window.initAllLowercaseCasing) {
+        window.initAllLowercaseCasing();
+      }
     })
     .catch(err => {
       // Skips silently if CMS JSON is missing, preserving default static HTML copy
