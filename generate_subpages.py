@@ -13,17 +13,17 @@ def main():
         index_content = f.read()
 
     # Extract header
-    header_match = re.search(r"<header>.*?</header>", index_content, re.DOTALL)
+    header_match = re.search(r"<header[^>]*>.*?</header>", index_content, re.DOTALL)
     if not header_match:
         print("Error: <header> not found in index.html")
         return
     header_template = header_match.group(0)
 
     # Extract footer
-    footer_match = re.search(r"<footer id=\"main-footer\">.*?</footer>", index_content, re.DOTALL)
+    footer_match = re.search(r"<footer[^>]*id=\"main-footer\"[^>]*>.*?</footer>", index_content, re.DOTALL)
     if not footer_match:
         # Fallback to general footer
-        footer_match = re.search(r"<footer>.*?</footer>", index_content, re.DOTALL)
+        footer_match = re.search(r"<footer[^>]*>.*?</footer>", index_content, re.DOTALL)
     if not footer_match:
         print("Error: <footer> not found in index.html")
         return
@@ -73,11 +73,11 @@ def main():
                         content = f.read()
 
                     # Replace header
-                    content = re.sub(r"<header>.*?</header>", subpage_header, content, flags=re.DOTALL)
+                    content = re.sub(r"<header[^>]*>.*?</header>", subpage_header, content, flags=re.DOTALL)
 
                     # Replace footer
-                    content = re.sub(r"<footer id=\"main-footer\">.*?</footer>", subpage_footer, content, flags=re.DOTALL)
-                    content = re.sub(r"<footer>.*?</footer>", subpage_footer, content, flags=re.DOTALL)
+                    content = re.sub(r"<footer[^>]*id=\"main-footer\"[^>]*>.*?</footer>", subpage_footer, content, flags=re.DOTALL)
+                    content = re.sub(r"<footer[^>]*>.*?</footer>", subpage_footer, content, flags=re.DOTALL)
 
                     # Fix scripts at the bottom:
                     # Replace src="cms-core.js" with src="../../cms-core.js"
