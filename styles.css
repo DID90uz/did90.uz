@@ -2151,5 +2151,281 @@ h1, h2, h3, h4, h5, h6,
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* --- NEXUS DESIGN OVERLAYS (NEUFORM TEMPLATE) --- */
+
+.hero-sec-nexus {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 0 120px 0;
+  background-color: #000000;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+  overflow: visible;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, rgba(168, 85, 247, 0.02) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-central-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.hero-central-box {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  background-color: rgba(7, 7, 8, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 80px 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 30px rgba(99, 102, 241, 0.04);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-central-box:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(99, 102, 241, 0.05),
+    inset 0 0 30px rgba(99, 102, 241, 0.08);
+}
+
+.hero-central-text {
+  font-family: "Inter Display", "Inter", sans-serif;
+  font-size: clamp(36px, 8vw, 96px);
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+}
+
+.engine-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #070708;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #818cf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.engine-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #818cf8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #818cf8;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; box-shadow: 0 0 12px #818cf8; }
+}
+
+/* Floating Capsules Styling */
+.floating-capsule {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #afafaf;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.floating-capsule svg {
+  color: #6c6c6c;
+  transition: color 0.4s ease;
+}
+
+.floating-capsule:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+  border-color: rgba(99, 102, 241, 0.35);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15);
+}
+
+.floating-capsule:hover svg {
+  color: #818cf8;
+}
+
+.capsule-top-left {
+  top: 15%;
+  left: -8%;
+}
+
+.capsule-top-right {
+  top: 25%;
+  right: -10%;
+}
+
+.capsule-bottom-left {
+  bottom: 20%;
+  left: -12%;
+}
+
+.capsule-bottom-right {
+  bottom: 5%;
+  right: -5%;
+}
+
+/* Left Vertical Toolbar */
+.hero-toolbar {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px 10px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 3;
+}
+
+.toolbar-item {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #6c6c6c;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.toolbar-item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.toolbar-item.active {
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Responsive Overrides for Nexus Layout */
+@media (max-width: 1199.98px) {
+  .capsule-top-left { left: -4%; }
+  .capsule-top-right { right: -6%; }
+  .capsule-bottom-left { left: -8%; }
+  .capsule-bottom-right { right: -2%; }
+  .hero-toolbar { left: -60px; }
+}
+
+@media (max-width: 991.98px) {
+  .hero-sec-nexus {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+  .hero-toolbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 10px 16px;
+    border-radius: 100px;
+  }
+  .floating-capsule {
+    position: static;
+    transform: none !important;
+  }
+  .floating-capsules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+  }
+  .hero-central-box {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .floating-capsules-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .hero-central-text {
+    font-size: 40px;
+  }
+  .hero-central-box {
+    padding: 50px 16px;
+  }
+}
+
+
 
 

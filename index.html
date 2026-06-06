@@ -60,35 +60,119 @@
   </header>
 
   <div class="content-wrapper">
-    <!-- Main Hero Workspace Section -->
-    <main class="hero-sec" id="hero-content" style="align-items: flex-start; text-align: left; padding: 140px 0 100px 0; z-index: 10; position: relative;">
-      <div class="available-badge" style="display: flex; align-items: center; gap: 8px; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; border-radius: 44px; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 24px; width: fit-content; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #00D419; box-shadow: 0 0 10px #00D419;"></span>
-        Yangi loyihalar uchun ochiq
-      </div>
-      <h1 class="hero-h1" style="font-size: clamp(38px, 6.2vw, 84px); font-weight: 400; line-height: 1.05; letter-spacing: -0.03em; max-width: 1000px; text-transform: none; margin-bottom: 32px;">
-        Toshkentdagi SaaS startaplari uchun<br>global dizayn yechimlari.
-      </h1>
-      <p class="hero-subtitle" style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-muted); max-width: 750px; line-height: 1.5; margin-bottom: 48px; text-align: left;">
-        Gain a competitive advantage through cutting edge product development, stunning web design, and impactful branding strategies that resonate with your audience.
-      </p>
-      
-      <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%; flex-wrap: wrap; gap: 30px;">
-        <a href="contact.html" class="btn-primary" style="background-color:#121212; border:1px solid rgba(255,255,255,0.15); color:#FFFFFF; border-radius:100px; padding:16px 36px; text-transform:none; font-size:15px; font-weight:500; display:inline-flex; align-items:center; gap:8px; box-shadow: 0 0 20px rgba(255,255,255,0.03); cursor: pointer;">
-          Muloqot band qilish <span style="font-size:16px;">↗</span>
-        </a>
-        <div class="trustpilot-hero-widget" style="display: flex; align-items: center; gap: 12px; text-align: left;">
-          <div class="avatars-overlap" style="display: flex; margin-right: -4px;">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; margin-right: -8px; object-fit: cover;" alt="user">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; margin-right: -8px; object-fit: cover;" alt="user">
-            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=80&h=80&q=80" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; object-fit: cover;" alt="user">
+    <!-- Main Hero Workspace Section (Nexus Design Style) -->
+    <main class="hero-sec-nexus" id="hero-content">
+      <!-- Ambient Radial Glow backdrop -->
+      <div class="hero-glow"></div>
+
+      <div class="hero-central-container">
+        <!-- Floating Vertical Tool Palette -->
+        <div class="hero-toolbar">
+          <button class="toolbar-item active" aria-label="Select Pointer" title="Pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="m13 13 6 6"/></svg>
+          </button>
+          <button class="toolbar-item" aria-label="Text Tool" title="Text Tool">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+          </button>
+          <button class="toolbar-item" aria-label="Edit Pen" title="Edit Pen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </button>
+          <button class="toolbar-item" aria-label="3D Cube" title="3D Cube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </button>
+        </div>
+
+        <!-- Central Glowing Typography Box -->
+        <div class="hero-central-box">
+          <!-- Engine status indicator pill -->
+          <div class="engine-badge">
+            <span class="engine-dot"></span>
+            DID90° ENGINE 2.0 AVAILABLE
           </div>
-          <div>
-            <div style="font-size: 13px; font-weight: 700; color: #FFFFFF;">Trustpilot-da 59+ sharh <span style="color:#00D419;">★</span> <a href="https://trustpilot.com" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Trustpilot</a></div>
-            <div style="font-size: 11px; color: var(--text-muted);">70+ SaaS startaplari tomonidan qo'llaniladi</div>
-          </div>
+
+          <h1 class="hero-central-text">DID90°</h1>
+
+          <!-- Floating Glassmorphic Capsules Around Box -->
+          <!-- Top Left -->
+          <a href="services.html" class="floating-capsule capsule-top-left">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            Minimalist Grid
+          </a>
+          <!-- Top Right -->
+          <a href="services.html" class="floating-capsule capsule-top-right">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+            Swiss Typography
+          </a>
+          <!-- Bottom Left -->
+          <a href="services.html" class="floating-capsule capsule-bottom-left">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            3D & Motion
+          </a>
+          <!-- Bottom Right -->
+          <a href="services.html" class="floating-capsule capsule-bottom-right">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Framer Dev
+          </a>
+        </div>
+
+        <!-- Floating Capsules Grid for Responsive Mobile View -->
+        <div class="floating-capsules-grid" style="display: none;">
+          <a href="services.html" class="floating-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            Minimalist Grid
+          </a>
+          <a href="services.html" class="floating-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+            Swiss Typography
+          </a>
+          <a href="services.html" class="floating-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            3D & Motion
+          </a>
+          <a href="services.html" class="floating-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Framer Dev
+          </a>
         </div>
       </div>
+
+      <!-- Hero Subtitle & CTA Actions -->
+      <p class="hero-subtitle" style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-muted); max-width: 750px; line-height: 1.5; margin-bottom: 40px; text-align: center; z-index: 2;">
+        Toshkentdagi SaaS startaplari va global brendlar uchun premium raqamli yechimlar. Biz g'oyalaringizni mukammal minimalist va ta'sirchan vizual muhitda loyihalashtiramiz, prototip yaratamiz va masshtablashtiramiz.
+      </p>
+
+      <div style="display: flex; align-items: center; justify-content: center; width: 100%; flex-wrap: wrap; gap: 30px; z-index: 2; margin-bottom: 20px;">
+        <a href="contact.html" class="btn-primary" style="background-color:#ffffff; border:1px solid #ffffff; color:#000000; border-radius:100px; padding:16px 36px; text-transform:none; font-size:15px; font-weight:500; display:inline-flex; align-items:center; gap:8px; box-shadow: 0 10px 30px rgba(255,255,255,0.05); cursor: pointer; text-decoration: none;">
+          Brif Yaratish <span style="font-size:16px;">↗</span>
+        </a>
+        <a href="services.html" class="btn-secondary" style="border:1px solid rgba(255,255,255,0.15); color:#ffffff; border-radius:100px; padding:16px 36px; text-transform:none; font-size:15px; font-weight:500; display:inline-flex; align-items:center; gap:8px; cursor: pointer; background: transparent; transition: border-color 0.3s ease; text-decoration: none;">
+          Xizmatlarimiz
+        </a>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const toolbarItems = document.querySelectorAll('.toolbar-item');
+          const centralText = document.querySelector('.hero-central-text');
+          
+          const textMapping = {
+            0: 'DID90°',     // Pointer -> Studio Name
+            1: 'TYPO',      // Text Tool -> Typography
+            2: 'MOTION',    // Edit Pen -> Motion
+            3: 'SPATIAL'     // 3D Cube -> 3D/Spatial
+          };
+          
+          toolbarItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+              toolbarItems.forEach(i => i.classList.remove('active'));
+              item.classList.add('active');
+              if (centralText && textMapping[index]) {
+                centralText.textContent = textMapping[index];
+              }
+            });
+          });
+        });
+      </script>
     </main>
 
     <!-- About Summary Grid Row -->
